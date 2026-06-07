@@ -54,28 +54,33 @@
   <img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=MD-Developer-yt&repo=StrickerIDBot&theme=radical&hide_border=true&border_radius=10&v=2" width="45%" />
 </a>
 <a href="https://github.com/Coder-yt/filelinkbot">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=MD-Developer-yt&repo=filelinkbot&theme=radical&hide_border=true&border_radius=10&v=2" width="45%" />
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=Coder-yt&repo=filelinkbot&theme=radical&hide_border=true&border_radius=10&v=2" width="45%" />
 </a>
 
 </div>
 
 <div align="center">
-  <h2><b>💻 SKILLS & TECHNOLOGIES</b></h2>
+  <h2><b>💻 SKILLS</b></h2>
   <hr style="width:50%; border-top: 2px solid grey;" />
 </div>
 
 <div align="center">
 
 ### 🔧 Languages & Frameworks
-<img src="https://skillicons.dev/icons?i=python,Go,javascript,typescript,html,css&theme=dark&perline=9" />
+<img src="https://skillicons.dev/icons?i=python,javascript,typescript,html,css&theme=dark&perline=9" />
 
 ### ☁️ Cloud & DevOps
 <img src="https://skillicons.dev/icons?i=docker,git,github&theme=dark&perline=9" />
 
 ### 🗄️ Databases & Tools
-<img src="https://skillicons.dev/icons?i=mongodb,mysql,postgresql,sqlite,vscode,powershell&theme=dark&perline=9" />
+<img src="https://skillicons.dev/icons?i=mongodb,mysql,vscode,powershell&theme=dark&perline=9" />
 
 ## Contact Me 
+  <p>
+    <img src="https://img.shields.io/badge/Made%20with-❤️%20and%20☕-FF3C3C?style=for-the-badge" alt="Made with Love and Coffee" />
+  </p>
+
+</div>
 
 <p align="center">
 <a href="https://telegram.me/Mr_Mohammed_29"><img alt="replit" src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white"/></a>
