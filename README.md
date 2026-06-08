@@ -5,7 +5,8 @@
 </div>
 
 <img src="https://komarev.com/ghpvc/?username=MD-Developer-yt&style=for-the-badge&color=FF3C3C&label=PROFILE+VIEWS" alt="Profile Views"/>
-<a href="https://github.com/MD-Developer-yt"><img src="https://img.shields.io/github/followers/MD-Developer-yt?style=for-the-badge&color=FF3C3C&labelColor=1a1a1a" alt="GitHub followers"/></a>
+<ahref="https://github.com/MD-Developer-yt">
+<img src="https://img.shields.io/github/followers/MD-Developer-yt?style=for-the-badge&color=FF3C3C&labelColor=1a1a1a" alt="GitHub followers"/></a>
 <a href="https://github.com/MD-Developer-yt"><img src="https://img.shields.io/github/stars/MD-Developer-yt?style=for-the-badge&color=FF3C3C&labelColor=1a1a1a" alt="GitHub Stars"/></a>
 <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/MD-Developer-yt/MD-Developer-yt/main/stats/forks.json" />
 
