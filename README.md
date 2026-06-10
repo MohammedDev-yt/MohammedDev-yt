@@ -76,7 +76,7 @@
 </a>
 
 <a href="https://github.com/MD-Developer-yt/telegraph-utlra-bot">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=MD-Developer-yt&repo=telegraph-ultra-bot&theme=radical&hide_border=true&border_radius=10&v=2" width="45%" />
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=MD-Developer-yt&repo=telegraph-utlra-bot&theme=radical&hide_border=true&border_radius=10&v=2" width="45%" />
 </a>
 
 
