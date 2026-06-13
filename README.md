@@ -82,8 +82,6 @@
 
 </div>
 
-=9" />
-
 ## Contact Me 
   <p>
     <img src="https://img.shields.io/badge/Made%20with-❤️%20and%20☕-FF3C3C?style=for-the-badge" alt="Made with Love and Coffee" />
