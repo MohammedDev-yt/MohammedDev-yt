@@ -35,6 +35,11 @@
   <img src="https://raw.githubusercontent.com/SP-XD/SP-XD/main/images/dev-working_rounded.gif" alt="Developer Workspace" width="100%">
 </p>
 
+
+<p align="center">
+  <a href="#-quick-start"><img src="assets/pip-install.svg" height="45" alt="pip install  python.py"></a>
+</p>
+
 <div align="center">
   <h2><b>📊 GITHUB STATS</b></h2>
   <hr style="width:50%; border-top: 2px solid grey;" />
@@ -129,4 +134,7 @@
   </a>
 <a href="https://telegram.me/Mr_Mohammed_29"><img alt="replit" src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white"/></a>
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/chart?repos=MohammedDev-yt/MohammedDev-yt&type=timeline&logscale&legend=bottom-right)](https://www.star-history.com/?repos=MohammedDev-yt%2FMohammedDev-yt&type=timeline&logscale=&legend=bottom-right)
 
