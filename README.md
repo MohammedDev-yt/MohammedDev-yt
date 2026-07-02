@@ -31,6 +31,10 @@
 </tr>
 </table>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SP-XD/SP-XD/main/images/dev-working_rounded.gif" alt="Developer Workspace" width="100%">
+</p>
+
 <div align="center">
   <h2><b>📊 GITHUB STATS</b></h2>
   <hr style="width:50%; border-top: 2px solid grey;" />
