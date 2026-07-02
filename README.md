@@ -63,7 +63,8 @@
 
 <br/>
 
-https://github-profile-trophy.vercel.app/?username=MohammedDev-yt&theme=darkhub
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=MohammedDev-yt&theme=onedark)](https://github.com/MohammedDev-yt/github-profile-trophy)
 
 <div align="center">
   <h2><b>📌 PINNED REPOSITORIES</b></h2>
