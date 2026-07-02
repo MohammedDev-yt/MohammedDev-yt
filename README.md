@@ -130,6 +130,3 @@
 <a href="https://telegram.me/Mr_Mohammed_29"><img alt="replit" src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white"/></a>
 
 
-<p align="center">
-  <img src="https://media.giphy.com/media/juua9i2c2fA0AIp2iq/giphy.gif" width="100%" alt="Advanced Coding">
-</p>
