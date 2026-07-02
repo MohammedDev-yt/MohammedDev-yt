@@ -37,7 +37,9 @@
 
 
 <p align="center">
-  <a href="#-quick-start"><img src="assets/pip-install.svg" height="45" alt="pip install  python.py"></a>
+  <a href="#">
+    <img src="assets/pip-install.svg" height="45" alt="MohammedDev-yt">
+  </a>
 </p>
 
 <div align="center">
@@ -120,6 +122,10 @@
 
 ---
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/chart?repos=MohammedDev-yt/MohammedDev-yt&type=timeline&logscale&legend=bottom-right)](https://www.star-history.com/?repos=MohammedDev-yt%2FMohammedDev-yt&type=timeline&logscale=&legend=bottom-right)
+
 
 <!-- ====================  CONNECT  ==================== -->
 
@@ -133,8 +139,4 @@
     <img src="https://img.shields.io/badge/My_Repos-00F7FF?style=for-the-badge&logo=git&logoColor=white"/>
   </a>
 <a href="https://telegram.me/Mr_Mohammed_29"><img alt="replit" src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white"/></a>
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/chart?repos=MohammedDev-yt/MohammedDev-yt&type=timeline&logscale&legend=bottom-right)](https://www.star-history.com/?repos=MohammedDev-yt%2FMohammedDev-yt&type=timeline&logscale=&legend=bottom-right)
 
