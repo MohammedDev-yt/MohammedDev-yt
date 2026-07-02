@@ -64,7 +64,11 @@
 <br/>
 
 
+<!-- ====================  Github Trophies ==================== -->
+
 [![trophy](https://github-profile-trophy.vercel.app/?username=MohammedDev-yt&theme=onedark)](https://github.com/MohammedDev-yt/github-profile-trophy)
+
+---
 
 <div align="center">
   <h2><b>📌 PINNED REPOSITORIES</b></h2>
@@ -86,8 +90,6 @@
 <a href="https://github.com/MohammedDev-yt/telegraph-utlra-bot">
   <img src="https://github-readme-stats-eight-theta.vercel.app/api/pin/?username=MohammedDev-yt&repo=telegraph-utlra-bot&theme=radical&hide_border=true&border_radius=10&v=2" width="45%" />
 </a>
-
-
 </div>
 
 
@@ -99,6 +101,7 @@
   <img alt="MohammedDev-yt GitHub contribution snake animation - daily commit activity" src="https://raw.githubusercontent.com/MohammedDev-yt/MohammedDev-yt/output/github-contribution-grid-snake-dark.svg"/>
 </p>
 
+---
 
 <!-- ====================  QUOTE  ==================== -->
 
@@ -107,6 +110,7 @@
 </p>
 
 ---
+
 
 <!-- ====================  CONNECT  ==================== -->
 
