@@ -99,13 +99,24 @@
   <img alt="MohammedDev-yt GitHub contribution snake animation - daily commit activity" src="https://raw.githubusercontent.com/MohammedDev-yt/MohammedDev-yt/output/github-contribution-grid-snake-dark.svg"/>
 </p>
 
-## Contact Me 
-  <p>
-    <img src="https://img.shields.io/badge/Made%20with-❤️%20and%20☕-FF3C3C?style=for-the-badge" alt="Made with Love and Coffee" />
-  </p>
 
-</div>
-
+<!-- ====================  QUOTE  ==================== -->
 
 <p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Random Dev Quote"/>
+</p>
+
+---
+
+<!-- ====================  CONNECT  ==================== -->
+
+<h2 align="center">🤝 Connect</h2>
+
+<p align="center">
+  <a href="https://github.com/MohammedDev-yt">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+  <a href="https://github.com/MohammedDev-yt?tab=repositories">
+    <img src="https://img.shields.io/badge/My_Repos-00F7FF?style=for-the-badge&logo=git&logoColor=white"/>
+  </a>
 <a href="https://telegram.me/Mr_Mohammed_29"><img alt="replit" src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white"/></a>
