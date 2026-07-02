@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="80" viewBox="0 0 520 80">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+
+    <linearGradient id="text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect x="2" y="2" width="516" height="76" rx="18"
+        fill="url(#bg)"
+        stroke="#38bdf8"
+        stroke-width="2"
+        filter="url(#shadow)"/>
+
+  <circle cx="40" cy="40" r="7" fill="#38bdf8">
+    <animate attributeName="r"
+             values="7;10;7"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <text x="65" y="50"
+        font-family="Segoe UI, Arial, sans-serif"
+        font-size="28"
+        font-weight="700"
+        fill="url(#text)">
+    MohammedDev-yt
+  </text>
+
+  <rect x="2" y="2" width="516" height="76" rx="18"
+        fill="none"
+        stroke="url(#text)"
+        stroke-width="2"
+        stroke-dasharray="40 20">
+    <animate attributeName="stroke-dashoffset"
+             from="60"
+             to="0"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </rect>
+</svg>
