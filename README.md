@@ -58,6 +58,8 @@
 
 <br/>
 
+https://github-profile-trophy.vercel.app/?username=MohammedDev-yt&theme=darkhub
+
 <div align="center">
   <h2><b>📌 PINNED REPOSITORIES</b></h2>
   <hr style="width:50%; border-top: 2px solid grey;" />
@@ -81,6 +83,15 @@
 
 
 </div>
+
+
+<!-- ====================  SNAKE EATING CONTRIBUTIONS  ==================== -->
+
+<h2 align="center">🐍 Contribution Snake</h2>
+
+<p align="center">
+  <img alt="MohammedDev-yt GitHub contribution snake animation - daily commit activity" src="https://raw.githubusercontent.com/MohammedDev-yt/MohammedDev-yt/output/github-contribution-grid-snake-dark.svg"/>
+</p>
 
 ## Contact Me 
   <p>
