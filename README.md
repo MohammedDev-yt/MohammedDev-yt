@@ -45,12 +45,12 @@
 #### 📚 Frontend Development & Frameworks
 
 - [![](https://ziadoua.github.io/m3-Markdown-Badges/badges/HTML/html1.svg)](https://github.com/MohammedDev-yt)
--  [![](https://ziadoua.github.io/m3-Markdown-Badges/badges/CSS/css2.svg)](https://github.com/MohammedDev-yt)
+- [![](https://ziadoua.github.io/m3-Markdown-Badges/badges/CSS/css2.svg)](https://github.com/MohammedDev-yt)
 
 #### 🔌 Backend Development & Database Services
 
--  [![](https://ziadoua.github.io/m3-Markdown-Badges/badges/MongoDB/mongodb1.svg)](https://github.com/MohammedDev-yt)
--  [![](https://ziadoua.github.io/m3-Markdown-Badges/badges/Python/python3.svg)](https://github.com/MohammedDev-yt)
+- [![](https://ziadoua.github.io/m3-Markdown-Badges/badges/MongoDB/mongodb1.svg)](https://github.com/MohammedDev-yt)
+- [![](https://ziadoua.github.io/m3-Markdown-Badges/badges/Python/python3.svg)](https://github.com/MohammedDev-yt)
 - [![](https://ziadoua.github.io/m3-Markdown-Badges/badges/Docker/docker3.svg)](https://github.com/Shineii86)
 
 ## 📈 Contribution Stack
