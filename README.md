@@ -38,7 +38,7 @@
 
 <p align="center">
   <a href="#">
-    <img src="assets/pip-install.svg" height="45" alt="MohammedDev-yt">
+    <img src="assets/pip-install.svg" height="45" alt="Mohammed Developer">
   </a>
 </p>
 
