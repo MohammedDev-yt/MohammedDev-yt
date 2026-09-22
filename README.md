@@ -72,13 +72,6 @@
 
 </div>
 
-
-<div align="center">
-  <h2><b>📈 CONTRIBUTION GRAPH</b></h2>
-  <hr style="width:50%; border-top: 2px solid grey;" />
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MohammedDev-yt&bg_color=0d1117&color=ffffff&line=FF3C3C&point=FF3C3C&area=true&area_color=FF3C3C&hide_border=true&custom_title=Contribution%20Activity%20Graph" alt="GitHub Activity Graph" />
-</div>
-
 <br/>
 
 
@@ -147,3 +140,6 @@
   </a>
 <a href="https://telegram.me/Mr_Mohammed_29"><img alt="replit" src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white"/></a>
 
+[![Profile last updated](https://img.shields.io/github/last-commit/MohammedDev-yt/MohammedDev-yt/main?label=Last%20Updated&style=flat&logo=github&logoColor=white&color=7C3AED)](https://github.com/MohammedDev-yt/MohammedDev-yt/commits) [![Last Seen](https://img.shields.io/endpoint?style=flat&url=https://mylastseen.vercel.app/api/lastseen/MohammedDev-yt/badge)](https://mylastseen.vercel.app)
+
+[![Pofile views](https://u8views.com/api/v1/github/profiles/157171073/views/day-week-month-total-count.svg)](https://u8views.com/github/MohammedDev-yt)
