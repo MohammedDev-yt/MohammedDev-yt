@@ -42,29 +42,25 @@
   </a>
 </p>
 
-<div align="center">
-  <h2><b>📊 GITHUB STATS</b></h2>
-  <hr style="width:50%; border-top: 2px solid grey;" />
-</div>
+## 📈 Contribution Stack
 
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MohammedDev-yt&theme=radical" alt="GitHub Profile Details" />
+
+<a href="https://github.com/MohammedDev-yt">
+<img src="https://github-widgetbox.vercel.app/api/profile?username=MohammedDev-yt&data=followers,repositories,stars,commits&theme=carbon" alt="GitHub WidgetBox" />
+</a>
+
+<a href="https://github.com/MohammedDev-yt">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://yourinsights.vercel.app/api/insight?username=MohammedDev-yt&theme=github_dark&graph=true&languages=true&streak=true&stats=true&header=true&summary=true&profile=true">
+  <source media="(prefers-color-scheme: light)" srcset="https://yourinsights.vercel.app/api/insight?username=MohammedDev-yt&theme=github_light&graph=true&languages=true&streak=true&stats=true&header=true&summary=true&profile=true">
+  <img src="https://yourinsights.vercel.app/api/insight?username=MohammedDev-yt&theme=radical&graph=true&languages=true&streak=true&stats=true&header=true&summary=true&profile=true" alt="GitHub Card" width="850" />
+  </a>
+</picture>
+</a>
+
 </div>
 
-<br/>
-
-<div align="center">
-  <!-- Note: Using Heroku instance as demolab.com is down. Consider self-hosting: https://github.com/anuraghazra/github-readme-stats#deploy-on-your-own -->
-  <img src="https://streak-stats.vercel.app/?user=MohammedDev-yt&theme=radical&hide_border=true&border_radius=10" alt="GitHub Streak Stats" />
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=MohammedDev-yt&theme=radical&show_icons=true&hide_border=true&layout=compact&langs_count=8&border_radius=10" alt="Top Languages" />
-</div>
-
-<br/>
 
 <div align="center">
   <h2><b>📈 CONTRIBUTION GRAPH</b></h2>
