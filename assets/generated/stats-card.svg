@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250">
+  <rect width="1200" height="250" rx="18"
+        fill="#0b1423"
+        stroke="#17243a"/>
+
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+
+    <text x="55" y="48"
+          text-anchor="start"
+          fill="#738198"
+          font-size="12"
+          letter-spacing="4">
+      MISSION TELEMETRY
+    </text>
+
+    <g fill="#eaf2ff"
+       font-size="34"
+       font-weight="700">
+      <text x="150" y="130">551</text>
+      <text x="390" y="130">69</text>
+      <text x="630" y="130">0</text>
+      <text x="870" y="130">0</text>
+      <text x="1090" y="130">9</text>
+    </g>
+
+    <g fill="#738198" font-size="12">
+      <text x="150" y="158">Commits</text>
+      <text x="390" y="158">Stars</text>
+      <text x="630" y="158">PRs</text>
+      <text x="870" y="158">Issues</text>
+      <text x="1090" y="158">Repos</text>
+    </g>
+
+    <g stroke="#1d2a3f">
+      <path d="M270 75V180"/>
+      <path d="M510 75V180"/>
+      <path d="M750 75V180"/>
+      <path d="M990 75V180"/>
+    </g>
+
+    <g font-size="18">
+      <text x="150" y="92" fill="#55b7df">✦</text>
+      <text x="390" y="92" fill="#d5a23d">★</text>
+      <text x="630" y="92" fill="#9c82ef">◈</text>
+      <text x="870" y="92" fill="#38c7d1">◉</text>
+      <text x="1090" y="92" fill="#9c82ef">▣</text>
+    </g>
+
+  </g>
+</svg>
