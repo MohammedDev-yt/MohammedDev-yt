@@ -151,3 +151,7 @@
 [![Profile last updated](https://img.shields.io/github/last-commit/MohammedDev-yt/MohammedDev-yt/main?label=Last%20Updated&style=flat&logo=github&logoColor=white&color=7C3AED)](https://github.com/MohammedDev-yt/MohammedDev-yt/commits) 
 
 [![Pofile views](https://u8views.com/api/v1/github/profiles/157171073/views/day-week-month-total-count.svg)](https://u8views.com/github/MohammedDev-yt)
+
+## PageSpeed Insights
+
+![PageSpeed Insights](https://raw.githubusercontent.com/MohammedDev-yt/Images/f13849bc9989d66c67085313dd606ea978eff0f8/psi-gprm.svg)
