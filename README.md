@@ -152,5 +152,6 @@
 
 [![Pofile views](https://u8views.com/api/v1/github/profiles/157171073/views/day-week-month-total-count.svg)](https://u8views.com/github/MohammedDev-yt)
 
-<img src="https://user-images.githubusercontent.com/74038190/213910845-af37a709-8995-40d6-be59-724526e3c3d7.gif" width="900">
-<br><br>
+[![trophy](https://github-profile-trophy.vercel.app/?username=MohammedDev-yt&theme=onedark)](https://github.com/MohammedDev-yt/github-profile-trophy)
+
+
