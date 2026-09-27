@@ -1,107 +1,370 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
-  <rect width="1200" height="300" rx="18"
-        fill="#0b1423"
-        stroke="#17243a"/>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200"
+     height="300"
+     viewBox="0 0 1200 300">
 
-  <g font-family="Arial, sans-serif">
+  <defs>
 
-    <text x="55" y="48"
-          fill="#738198"
-          font-size="12"
-          letter-spacing="4">
-      FEATURED SYSTEMS
+    <!-- Background -->
+    <linearGradient id="bg"
+                    x1="0%" y1="0%"
+                    x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1423"/>
+      <stop offset="50%" stop-color="#101d32"/>
+      <stop offset="100%" stop-color="#080f1c"/>
+    </linearGradient>
+
+    <!-- Animated accent -->
+    <linearGradient id="accent"
+                    x1="0%" y1="0%"
+                    x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c4df">
+        <animate attributeName="stop-color"
+                 values="#22c4df;#9b75e8;#38bfd0;#22c4df"
+                 dur="6s"
+                 repeatCount="indefinite"/>
+      </stop>
+
+      <stop offset="50%" stop-color="#9b75e8">
+        <animate attributeName="stop-color"
+                 values="#9b75e8;#38bfd0;#22c4df;#9b75e8"
+                 dur="6s"
+                 repeatCount="indefinite"/>
+      </stop>
+
+      <stop offset="100%" stop-color="#38bfd0">
+        <animate attributeName="stop-color"
+                 values="#38bfd0;#22c4df;#9b75e8;#38bfd0"
+                 dur="6s"
+                 repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3"
+                      result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+  </defs>
+
+
+  <!-- Background -->
+  <rect width="1200"
+        height="300"
+        rx="18"
+        fill="url(#bg)"
+        stroke="#17243a"
+        stroke-width="2"/>
+
+
+  <!-- Animated outer border -->
+  <rect x="1"
+        y="1"
+        width="1198"
+        height="298"
+        rx="17"
+        fill="none"
+        stroke="url(#accent)"
+        stroke-width="1"
+        opacity=".35"/>
+
+
+  <!-- Header -->
+  <text x="55"
+        y="48"
+        fill="url(#accent)"
+        font-family="Arial, sans-serif"
+        font-size="12"
+        font-weight="700"
+        letter-spacing="4">
+    FEATURED SYSTEMS
+  </text>
+
+
+  <!-- System status -->
+  <text x="1125"
+        y="48"
+        text-anchor="end"
+        fill="#56647a"
+        font-family="Arial, sans-serif"
+        font-size="11">
+    SYS 2/2 ONLINE
+  </text>
+
+
+  <!-- Status lights -->
+  <circle cx="330"
+          cy="44"
+          r="4"
+          fill="#22c4df"
+          filter="url(#glow)">
+    <animate attributeName="opacity"
+             values=".35;1;.35"
+             dur="1.8s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="870"
+          cy="44"
+          r="4"
+          fill="#9b75e8"
+          filter="url(#glow)">
+    <animate attributeName="opacity"
+             values=".35;1;.35"
+             dur="2.2s"
+             repeatCount="indefinite"/>
+  </circle>
+
+
+  <!-- Header divider -->
+  <path d="M55 62H1145"
+        stroke="#1d2a3f"
+        stroke-width="1"/>
+
+
+  <!-- Project cards -->
+
+  <!-- Left card -->
+  <rect x="75"
+        y="78"
+        width="470"
+        height="150"
+        rx="12"
+        fill="#111c2c"
+        stroke="#1e2d43"
+        stroke-width="1.5"/>
+
+
+  <!-- Right card -->
+  <rect x="655"
+        y="78"
+        width="470"
+        height="150"
+        rx="12"
+        fill="#111c2c"
+        stroke="#1e2d43"
+        stroke-width="1.5"/>
+
+
+  <!-- Card accent lines -->
+  <rect x="75"
+        y="78"
+        width="470"
+        height="3"
+        rx="2"
+        fill="#9b75e8"
+        opacity=".8"/>
+
+  <rect x="655"
+        y="78"
+        width="470"
+        height="3"
+        rx="2"
+        fill="#22c4df"
+        opacity=".8"/>
+
+
+  <!-- Project icons -->
+  <g font-family="Arial, sans-serif"
+     font-size="11"
+     font-weight="700"
+     text-anchor="middle">
+
+    <circle cx="105"
+            cy="111"
+            r="15"
+            fill="#211b3d"
+            stroke="#9b75e8"/>
+
+    <text x="105"
+          y="115"
+          fill="#b69af2">
+      N
     </text>
 
-    <text x="1125" y="48"
-          text-anchor="end"
-          fill="#56647a"
-          font-size="11">
-      SYS 2/2 ONLINE
+
+    <circle cx="685"
+            cy="111"
+            r="15"
+            fill="#12323b"
+            stroke="#22c4df"/>
+
+    <text x="685"
+          y="115"
+          fill="#38c7d1">
+      S
     </text>
-
-    <circle cx="330" cy="44" r="4" fill="#22c4df"/>
-    <circle cx="870" cy="44" r="4" fill="#9b75e8"/>
-
-    <rect x="75" y="78"
-          width="470"
-          height="150"
-          rx="12"
-          fill="#111c2c"
-          stroke="#1e2d43"/>
-
-    <rect x="655" y="78"
-          width="470"
-          height="150"
-          rx="12"
-          fill="#111c2c"
-          stroke="#1e2d43"/>
-
-    <g text-anchor="middle">
-
-      <text x="310" y="125"
-            fill="#eaf2ff"
-            font-size="18"
-            font-weight="700">
-        nebula-ui
-      </text>
-
-      <text x="310" y="150"
-            fill="#8290a5"
-            font-size="12">
-        A component library with cosmic design tokens
-      </text>
-
-      <text x="310" y="168"
-            fill="#8290a5"
-            font-size="12">
-        and dark-first theming.
-      </text>
-
-      <rect x="268" y="188"
-            width="84"
-            height="25"
-            rx="12"
-            fill="#30255d"/>
-
-      <text x="310" y="205"
-            fill="#9d83df"
-            font-size="11">
-        Frontend
-      </text>
-
-
-      <text x="890" y="125"
-            fill="#eaf2ff"
-            font-size="18"
-            font-weight="700">
-        stargate-api
-      </text>
-
-      <text x="890" y="150"
-            fill="#8290a5"
-            font-size="12">
-        High-performance API gateway with built-in
-      </text>
-
-      <text x="890" y="168"
-            fill="#8290a5"
-            font-size="12">
-        observability and caching.
-      </text>
-
-      <rect x="848" y="188"
-            width="84"
-            height="25"
-            rx="12"
-            fill="#123d48"/>
-
-      <text x="890" y="205"
-            fill="#38bfd0"
-            font-size="11">
-        Backend
-      </text>
-
-    </g>
 
   </g>
+
+
+  <!-- Left project -->
+  <g font-family="Arial, sans-serif">
+
+    <text x="310"
+          y="120"
+          text-anchor="middle"
+          fill="#eaf2ff"
+          font-size="18"
+          font-weight="700">
+      nebula-ui
+    </text>
+
+    <text x="310"
+          y="147"
+          text-anchor="middle"
+          fill="#8290a5"
+          font-size="12">
+      A component library with cosmic design tokens
+    </text>
+
+    <text x="310"
+          y="165"
+          text-anchor="middle"
+          fill="#8290a5"
+          font-size="12">
+      and dark-first theming.
+    </text>
+
+    <!-- Tag -->
+    <rect x="268"
+          y="188"
+          width="84"
+          height="25"
+          rx="12"
+          fill="#30255d"
+          stroke="#4b3d80"/>
+
+    <text x="310"
+          y="205"
+          text-anchor="middle"
+          fill="#9d83df"
+          font-size="11">
+      Frontend
+    </text>
+
+  </g>
+
+
+  <!-- Right project -->
+  <g font-family="Arial, sans-serif">
+
+    <text x="890"
+          y="120"
+          text-anchor="middle"
+          fill="#eaf2ff"
+          font-size="18"
+          font-weight="700">
+      stargate-api
+    </text>
+
+    <text x="890"
+          y="147"
+          text-anchor="middle"
+          fill="#8290a5"
+          font-size="12">
+      High-performance API gateway with built-in
+    </text>
+
+    <text x="890"
+          y="165"
+          text-anchor="middle"
+          fill="#8290a5"
+          font-size="12">
+      observability and caching.
+    </text>
+
+    <!-- Tag -->
+    <rect x="848"
+          y="188"
+          width="84"
+          height="25"
+          rx="12"
+          fill="#123d48"
+          stroke="#1d6877"/>
+
+    <text x="890"
+          y="205"
+          text-anchor="middle"
+          fill="#38bfd0"
+          font-size="11">
+      Backend
+    </text>
+
+  </g>
+
+
+  <!-- Animated activity indicators -->
+  <g>
+
+    <circle cx="95"
+            cy="250"
+            r="3"
+            fill="#9b75e8">
+      <animate attributeName="opacity"
+               values=".25;1;.25"
+               dur="1.5s"
+               repeatCount="indefinite"/>
+    </circle>
+
+    <text x="105"
+          y="254"
+          fill="#56647a"
+          font-family="Arial, sans-serif"
+          font-size="9"
+          letter-spacing="2">
+      FRONTEND SYSTEM
+    </text>
+
+
+    <circle cx="675"
+            cy="250"
+            r="3"
+            fill="#22c4df">
+      <animate attributeName="opacity"
+               values=".25;1;.25"
+               dur="1.8s"
+               repeatCount="indefinite"/>
+    </circle>
+
+    <text x="685"
+          y="254"
+          fill="#56647a"
+          font-family="Arial, sans-serif"
+          font-size="9"
+          letter-spacing="2">
+      BACKEND SYSTEM
+    </text>
+
+  </g>
+
+
+  <!-- Bottom status -->
+  <path d="M55 272H1145"
+        stroke="#17243a"
+        stroke-width="1"/>
+
+  <text x="55"
+        y="288"
+        fill="#52627a"
+        font-family="Arial, sans-serif"
+        font-size="9"
+        letter-spacing="2">
+    PROJECT CONSTELLATION
+  </text>
+
+  <text x="1145"
+        y="288"
+        text-anchor="end"
+        fill="#38bfd0"
+        font-family="Arial, sans-serif"
+        font-size="9"
+        letter-spacing="2">
+    ALL SYSTEMS NOMINAL
+  </text>
+
 </svg>
