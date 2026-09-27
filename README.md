@@ -54,7 +54,7 @@
     alt="Mohammed Galaxy Header"
   />
 
-  <br/><br/>
+  <br>
 
   <!-- Mission Telemetry -->
   <img
@@ -63,7 +63,7 @@
     alt="Mission Telemetry"
   />
 
-  <br/><br/>
+  <br>
 
   <!-- Language Telemetry -->
   <img
@@ -72,7 +72,7 @@
     alt="Language and Focus Telemetry"
   />
 
-  <br/><br/>
+  <br>
 
   <!-- Featured Systems -->
   <img
