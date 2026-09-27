@@ -1,781 +1,564 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="850"
-     height="280"
-     viewBox="0 0 850 280">
-
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="280" viewBox="0 0 850 280">
   <defs>
+    <style>
+      .star-bg {
+        animation: twinkle-slow 7s ease-in-out infinite;
+      }
+      .star-mid {
+        animation: twinkle-mid 5s ease-in-out infinite;
+      }
+      .star-fg {
+        animation: twinkle-fast 3s ease-in-out infinite;
+      }
 
-    <!-- ========================= -->
-    <!-- BACKGROUND -->
-    <!-- ========================= -->
+      @keyframes twinkle-slow {
+        0%, 100% { opacity: 0.08; }
+        50% { opacity: 0.3; }
+      }
 
-    <radialGradient id="space"
-                    cx="50%"
-                    cy="50%"
-                    r="70%">
-      <stop offset="0%" stop-color="#111c32"/>
-      <stop offset="45%" stop-color="#0b1425"/>
-      <stop offset="100%" stop-color="#050a14"/>
+      @keyframes twinkle-mid {
+        0%, 100% { opacity: 0.15; }
+        50% { opacity: 0.5; }
+      }
+
+      @keyframes twinkle-fast {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 0.8; }
+      }
+
+      .core-ring {
+        animation: pulse-core 3s ease-in-out infinite;
+      }
+
+      .core-ring-inner {
+        animation: pulse-core 3s ease-in-out infinite 1.5s;
+      }
+
+      @keyframes pulse-core {
+        0%, 100% {
+          stroke-opacity: 0.3;
+          transform: scale(1);
+          transform-origin: 425px 155px;
+        }
+        50% {
+          stroke-opacity: 0.8;
+          transform: scale(1.06);
+          transform-origin: 425px 155px;
+        }
+      }
+
+      .shooting-star {
+        opacity: 0;
+        animation: shoot linear infinite;
+      }
+
+      @keyframes shoot {
+        0% {
+          opacity: 0;
+          transform: translate(0, 0);
+        }
+        5% {
+          opacity: 0.9;
+        }
+        15% {
+          opacity: 0.6;
+          transform: translate(var(--shoot-tx), var(--shoot-ty));
+        }
+        20% {
+          opacity: 0;
+          transform: translate(var(--shoot-tx), var(--shoot-ty));
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+
+    <filter id="nebula-outer">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+
+    <filter id="nebula-inner">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+
+    <filter id="label-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+    </filter>
+
+    <filter id="core-bright-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+
+    <radialGradient id="core-haze-gradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="coreGlow">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="20%" stop-color="#67e8f9"/>
-      <stop offset="45%" stop-color="#22d3ee" stop-opacity=".55"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <radialGradient id="core-inner-gradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#00d4ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
     </radialGradient>
 
-    <filter id="glow"
-            x="-100%"
-            y="-100%"
-            width="300%"
-            height="300%">
-      <feGaussianBlur stdDeviation="3"
-                      result="blur"/>
+    <linearGradient id="shoot-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="star-glow-0" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#a78bfa" flood-opacity="0.5" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
       <feMerge>
-        <feMergeNode in="blur"/>
+        <feMergeNode in="glow"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <filter id="strongGlow"
-            x="-150%"
-            y="-150%"
-            width="400%"
-            height="400%">
-      <feGaussianBlur stdDeviation="7"
-                      result="blur"/>
+    <filter id="star-glow-1" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#00d4ff" flood-opacity="0.5" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
       <feMerge>
-        <feMergeNode in="blur"/>
+        <feMergeNode in="glow"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <!-- ========================= -->
-    <!-- GALAXY ORBIT PATHS -->
-    <!-- ========================= -->
-
-    <path id="orbit1"
-          d="M 85 151
-             C 185 62, 330 65, 425 140
-             C 520 215, 670 215, 765 140"/>
-
-    <path id="orbit2"
-          d="M 75 180
-             C 200 235, 335 220, 425 140
-             C 515 60, 650 55, 780 115"/>
-
-    <path id="orbit3"
-          d="M 110 100
-             C 230 190, 335 195, 425 140
-             C 515 85, 635 85, 750 175"/>
-
+    <filter id="star-glow-2" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#ffb020" flood-opacity="0.5" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
-
-  <!-- ================================================= -->
-  <!-- SPACE BACKGROUND -->
-  <!-- ================================================= -->
-
-  <rect width="850"
-        height="280"
-        rx="14"
-        fill="url(#space)"/>
-
-
-  <!-- ================================================= -->
-  <!-- DISTANT NEBULA -->
-  <!-- ================================================= -->
-
-  <ellipse cx="425"
-           cy="140"
-           rx="300"
-           ry="100"
-           fill="#2563eb"
-           opacity=".035"
-           filter="url(#strongGlow)"/>
-
-  <ellipse cx="425"
-           cy="140"
-           rx="220"
-           ry="70"
-           fill="#a855f7"
-           opacity=".025"
-           filter="url(#strongGlow)"/>
-
-
-  <!-- ================================================= -->
-  <!-- STAR FIELD -->
-  <!-- ================================================= -->
-
-  <g fill="#ffffff">
-
-    <circle cx="38" cy="35" r="1"/>
-    <circle cx="82" cy="72" r=".7"/>
-    <circle cx="118" cy="30" r=".8"/>
-    <circle cx="156" cy="55" r=".6"/>
-    <circle cx="194" cy="28" r="1"/>
-    <circle cx="235" cy="44" r=".7"/>
-    <circle cx="275" cy="20" r=".6"/>
-    <circle cx="318" cy="52" r=".8"/>
-    <circle cx="362" cy="27" r=".6"/>
-    <circle cx="405" cy="45" r=".8"/>
-    <circle cx="450" cy="22" r=".7"/>
-    <circle cx="490" cy="43" r=".9"/>
-    <circle cx="535" cy="25" r=".6"/>
-    <circle cx="580" cy="51" r=".8"/>
-    <circle cx="622" cy="30" r=".7"/>
-    <circle cx="670" cy="47" r=".9"/>
-    <circle cx="710" cy="25" r=".6"/>
-    <circle cx="755" cy="52" r=".8"/>
-    <circle cx="810" cy="35" r="1"/>
-
-    <circle cx="28" cy="105" r=".7"/>
-    <circle cx="65" cy="132" r=".6"/>
-    <circle cx="105" cy="110" r=".8"/>
-    <circle cx="148" cy="150" r=".7"/>
-    <circle cx="205" cy="116" r=".6"/>
-    <circle cx="265" cy="132" r=".8"/>
-    <circle cx="315" cy="105" r=".6"/>
-    <circle cx="360" cy="120" r=".8"/>
-    <circle cx="492" cy="115" r=".7"/>
-    <circle cx="540" cy="135" r=".6"/>
-    <circle cx="595" cy="110" r=".8"/>
-    <circle cx="650" cy="145" r=".7"/>
-    <circle cx="705" cy="115" r=".6"/>
-    <circle cx="770" cy="140" r=".9"/>
-    <circle cx="820" cy="105" r=".7"/>
-
-    <circle cx="45" cy="225" r=".8"/>
-    <circle cx="90" cy="250" r=".6"/>
-    <circle cx="145" cy="215" r=".7"/>
-    <circle cx="205" cy="245" r=".9"/>
-    <circle cx="260" cy="225" r=".6"/>
-    <circle cx="315" cy="255" r=".8"/>
-    <circle cx="365" cy="230" r=".6"/>
-    <circle cx="490" cy="245" r=".8"/>
-    <circle cx="545" cy="220" r=".6"/>
-    <circle cx="600" cy="250" r=".8"/>
-    <circle cx="655" cy="225" r=".7"/>
-    <circle cx="710" cy="250" r=".9"/>
-    <circle cx="760" cy="220" r=".6"/>
-    <circle cx="815" cy="245" r=".8"/>
-
-  </g>
-
-
-  <!-- ================================================= -->
-  <!-- TWINKLING STARS -->
-  <!-- ================================================= -->
-
-  <g fill="#67e8f9">
-
-    <circle cx="130" cy="82" r="1.5">
-      <animate attributeName="opacity"
-               values=".15;1;.15"
-               dur="2.5s"
-               repeatCount="indefinite"/>
-      <animate attributeName="r"
-               values="1;2;1"
-               dur="2.5s"
-               repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="250" cy="72" r="1.4">
-      <animate attributeName="opacity"
-               values=".2;1;.2"
-               dur="3.1s"
-               repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="585" cy="78" r="1.6">
-      <animate attributeName="opacity"
-               values=".1;1;.1"
-               dur="2.2s"
-               repeatCount="indefinite"/>
-      <animate attributeName="r"
-               values="1;2.2;1"
-               dur="2.2s"
-               repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="720" cy="92" r="1.4">
-      <animate attributeName="opacity"
-               values=".15;1;.15"
-               dur="3.4s"
-               repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="170" cy="200" r="1.5">
-      <animate attributeName="opacity"
-               values=".1;1;.1"
-               dur="2.8s"
-               repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="680" cy="205" r="1.5">
-      <animate attributeName="opacity"
-               values=".2;1;.2"
-               dur="3.6s"
-               repeatCount="indefinite"/>
-    </circle>
-
-  </g>
-
-
-  <!-- ================================================= -->
-  <!-- ROTATING GALAXY RINGS -->
-  <!-- ================================================= -->
-
-  <g fill="none"
-     stroke-linecap="round">
-
-    <ellipse cx="425"
-             cy="140"
-             rx="325"
-             ry="78"
-             stroke="#22d3ee"
-             stroke-width="1"
-             opacity=".24"
-             stroke-dasharray="2 12">
-
-      <animateTransform
-        attributeName="transform"
-        type="rotate"
-        from="0 425 140"
-        to="360 425 140"
-        dur="24s"
-        repeatCount="indefinite"/>
-
-    </ellipse>
-
-
-    <ellipse cx="425"
-             cy="140"
-             rx="275"
-             ry="62"
-             stroke="#a78bfa"
-             stroke-width="1"
-             opacity=".27"
-             stroke-dasharray="5 9">
-
-      <animateTransform
-        attributeName="transform"
-        type="rotate"
-        from="360 425 140"
-        to="0 425 140"
-        dur="18s"
-        repeatCount="indefinite"/>
-
-    </ellipse>
-
-
-    <ellipse cx="425"
-             cy="140"
-             rx="210"
-             ry="45"
-             stroke="#38bdf8"
-             stroke-width=".8"
-             opacity=".28"
-             stroke-dasharray="3 8">
-
-      <animateTransform
-        attributeName="transform"
-        type="rotate"
-        from="0 425 140"
-        to="360 425 140"
-        dur="12s"
-        repeatCount="indefinite"/>
-
-    </ellipse>
-
-  </g>
-
-
-  <!-- ================================================= -->
-  <!-- CURVED GALAXY PATHS -->
-  <!-- ================================================= -->
-
-  <g fill="none"
-     stroke-linecap="round">
-
-    <use href="#orbit1"
-         stroke="#22d3ee"
-         stroke-width="1"
-         opacity=".42"/>
-
-    <use href="#orbit2"
-         stroke="#a78bfa"
-         stroke-width="1"
-         opacity=".38"/>
-
-    <use href="#orbit3"
-         stroke="#f59e0b"
-         stroke-width=".8"
-         opacity=".35"/>
-
-  </g>
-
-
-  <!-- ================================================= -->
-  <!-- MOVING ORBIT PARTICLES -->
-  <!-- ================================================= -->
-
-  <g>
-
-    <circle r="2"
-            fill="#22d3ee"
-            filter="url(#glow)">
-
-      <animateMotion
-        dur="7s"
-        repeatCount="indefinite"
-        path="M 85 151 C 185 62, 330 65, 425 140 C 520 215, 670 215, 765 140"/>
-
-    </circle>
-
-
-    <circle r="2"
-            fill="#a78bfa"
-            filter="url(#glow)">
-
-      <animateMotion
-        dur="9s"
-        begin="1s"
-        repeatCount="indefinite"
-        path="M 75 180 C 200 235, 335 220, 425 140 C 515 60, 650 55, 780 115"/>
-
-    </circle>
-
-
-    <circle r="1.8"
-            fill="#f59e0b"
-            filter="url(#glow)">
-
-      <animateMotion
-        dur="6s"
-        begin="2s"
-        repeatCount="indefinite"
-        path="M 110 100 C 230 190, 335 195, 425 140 C 515 85, 635 85, 750 175"/>
-
-    </circle>
-
-  </g>
-
-
-  <!-- ================================================= -->
-  <!-- SHOOTING STAR 1 -->
-  <!-- ================================================= -->
-
-  <g>
-
-    <line x1="-80"
-          y1="-20"
-          x2="-15"
-          y2="45"
-          stroke="#ffffff"
-          stroke-width="2"
-          stroke-linecap="round"
-          opacity="0">
-
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        from="0 0"
-        to="520 185"
-        dur="2.2s"
-        begin="1s"
-        repeatCount="indefinite"/>
-
-      <animate attributeName="opacity"
-               values="0;0;1;0"
-               dur="2.2s"
-               begin="1s"
-               repeatCount="indefinite"/>
-
-    </line>
-
-    <line x1="-80"
-          y1="-20"
-          x2="-15"
-          y2="45"
-          stroke="#22d3ee"
-          stroke-width="1"
-          stroke-linecap="round"
-          opacity="0">
-
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        from="0 0"
-        to="520 185"
-        dur="2.2s"
-        begin="1s"
-        repeatCount="indefinite"/>
-
-      <animate attributeName="opacity"
-               values="0;0;.8;0"
-               dur="2.2s"
-               begin="1s"
-               repeatCount="indefinite"/>
-
-    </line>
-
-  </g>
-
-
-  <!-- ================================================= -->
-  <!-- SHOOTING STAR 2 -->
-  <!-- ================================================= -->
-
-  <g>
-
-    <line x1="900"
-          y1="-30"
-          x2="840"
-          y2="30"
-          stroke="#ffffff"
-          stroke-width="2"
-          stroke-linecap="round"
-          opacity="0">
-
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        from="0 0"
-        to="-600 210"
-        dur="2.7s"
-        begin="4s"
-        repeatCount="indefinite"/>
-
-      <animate attributeName="opacity"
-               values="0;0;1;0"
-               dur="2.7s"
-               begin="4s"
-               repeatCount="indefinite"/>
-
-    </line>
-
-    <line x1="900"
-          y1="-30"
-          x2="840"
-          y2="30"
-          stroke="#a78bfa"
-          stroke-width="1"
-          stroke-linecap="round"
-          opacity="0">
-
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        from="0 0"
-        to="-600 210"
-        dur="2.7s"
-        begin="4s"
-        repeatCount="indefinite"/>
-
-      <animate attributeName="opacity"
-               values="0;0;.8;0"
-               dur="2.7s"
-               begin="4s"
-               repeatCount="indefinite"/>
-
-    </line>
-
-  </g>
-
-
-  <!-- ================================================= -->
-  <!-- SHOOTING STAR 3 -->
-  <!-- ================================================= -->
-
-  <g>
-
-    <line x1="300"
-          y1="-40"
-          x2="345"
-          y2="5"
-          stroke="#ffffff"
-          stroke-width="1.8"
-          stroke-linecap="round"
-          opacity="0">
-
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        from="0 0"
-        to="270 230"
-        dur="2s"
-        begin="7s"
-        repeatCount="indefinite"/>
-
-      <animate attributeName="opacity"
-               values="0;0;1;0"
-               dur="2s"
-               begin="7s"
-               repeatCount="indefinite"/>
-
-    </line>
-
-  </g>
-
-
-  <!-- ================================================= -->
-  <!-- CENTRAL CORE GLOW -->
-  <!-- ================================================= -->
-
-  <circle cx="425"
-          cy="140"
-          r="45"
-          fill="url(#coreGlow)"
-          opacity=".3">
-
-    <animate attributeName="r"
-             values="35;50;35"
-             dur="5s"
+  <!-- Background -->
+  <rect x="0" y="0" width="850" height="280" rx="12" ry="12" fill="#080c14"/>
+
+  <!-- Outer nebula -->
+  <circle cx="245" cy="125" r="120"
+          fill="#a78bfa"
+          opacity="0.015"
+          filter="url(#nebula-outer)"/>
+
+  <circle cx="625" cy="175" r="100"
+          fill="#ffb020"
+          opacity="0.012"
+          filter="url(#nebula-outer)"/>
+
+  <circle cx="425" cy="195" r="140"
+          fill="#00d4ff"
+          opacity="0.01"
+          filter="url(#nebula-outer)"/>
+
+  <!-- Star field -->
+  <circle cx="810.9" cy="185.1" r="0.53" fill="#00d4ff" opacity="0.16" class="star-bg"/>
+  <circle cx="279.4" cy="253.4" r="0.69" fill="#ffffff" opacity="0.26" class="star-bg"/>
+  <circle cx="713.5" cy="181.1" r="0.77" fill="#ffffff" opacity="0.09" class="star-bg"/>
+  <circle cx="766.2" cy="67.0" r="0.49" fill="#ffffff" opacity="0.18" class="star-bg"/>
+  <circle cx="306.3" cy="108.4" r="0.70" fill="#a78bfa" opacity="0.20" class="star-bg"/>
+  <circle cx="667.8" cy="88.8" r="0.55" fill="#ffffff" opacity="0.10" class="star-bg"/>
+  <circle cx="281.8" cy="170.8" r="0.62" fill="#ffffff" opacity="0.17" class="star-bg"/>
+  <circle cx="310.0" cy="239.2" r="0.53" fill="#ffffff" opacity="0.27" class="star-bg"/>
+  <circle cx="738.7" cy="178.0" r="0.63" fill="#ffb020" opacity="0.12" class="star-bg"/>
+  <circle cx="694.5" cy="21.3" r="0.30" fill="#ffffff" opacity="0.26" class="star-bg"/>
+  <circle cx="305.7" cy="97.5" r="0.71" fill="#ffffff" opacity="0.18" class="star-bg"/>
+  <circle cx="54.7" cy="202.5" r="0.64" fill="#ffffff" opacity="0.16" class="star-bg"/>
+  <circle cx="299.4" cy="27.5" r="0.57" fill="#00d4ff" opacity="0.14" class="star-bg"/>
+  <circle cx="734.8" cy="61.2" r="0.78" fill="#ffffff" opacity="0.18" class="star-bg"/>
+  <circle cx="265.3" cy="57.7" r="0.64" fill="#ffffff" opacity="0.11" class="star-bg"/>
+  <circle cx="545.2" cy="59.4" r="0.73" fill="#ffffff" opacity="0.17" class="star-bg"/>
+  <circle cx="326.9" cy="181.3" r="0.46" fill="#a78bfa" opacity="0.25" class="star-bg"/>
+  <circle cx="460.5" cy="54.3" r="0.31" fill="#ffffff" opacity="0.18" class="star-bg"/>
+  <circle cx="293.2" cy="150.3" r="0.49" fill="#ffffff" opacity="0.14" class="star-bg"/>
+  <circle cx="785.3" cy="172.6" r="0.32" fill="#ffffff" opacity="0.27" class="star-bg"/>
+  <circle cx="422.7" cy="180.6" r="0.80" fill="#ffb020" opacity="0.26" class="star-bg"/>
+  <circle cx="259.3" cy="242.2" r="0.40" fill="#ffffff" opacity="0.17" class="star-bg"/>
+  <circle cx="78.1" cy="27.0" r="0.57" fill="#ffffff" opacity="0.10" class="star-bg"/>
+  <circle cx="791.2" cy="39.5" r="0.62" fill="#ffffff" opacity="0.15" class="star-bg"/>
+  <circle cx="266.3" cy="97.2" r="0.70" fill="#00d4ff" opacity="0.09" class="star-bg"/>
+  <circle cx="691.3" cy="128.1" r="0.60" fill="#ffffff" opacity="0.28" class="star-bg"/>
+  <circle cx="18.4" cy="210.8" r="0.36" fill="#ffffff" opacity="0.19" class="star-bg"/>
+  <circle cx="11.0" cy="100.0" r="0.78" fill="#ffffff" opacity="0.23" class="star-bg"/>
+  <circle cx="106.5" cy="153.7" r="0.57" fill="#a78bfa" opacity="0.24" class="star-bg"/>
+  <circle cx="313.0" cy="225.7" r="0.42" fill="#ffffff" opacity="0.11" class="star-bg"/>
+  <circle cx="261.3" cy="70.1" r="0.58" fill="#ffffff" opacity="0.29" class="star-bg"/>
+  <circle cx="666.2" cy="42.2" r="0.54" fill="#ffffff" opacity="0.24" class="star-bg"/>
+  <circle cx="631.8" cy="149.2" r="0.38" fill="#ffb020" opacity="0.11" class="star-bg"/>
+  <circle cx="608.2" cy="130.3" r="0.52" fill="#ffffff" opacity="0.18" class="star-bg"/>
+  <circle cx="601.0" cy="180.0" r="0.68" fill="#ffffff" opacity="0.20" class="star-bg"/>
+  <circle cx="567.3" cy="52.9" r="0.50" fill="#ffffff" opacity="0.29" class="star-bg"/>
+  <circle cx="55.2" cy="185.7" r="0.56" fill="#00d4ff" opacity="0.08" class="star-bg"/>
+  <circle cx="772.0" cy="175.1" r="0.47" fill="#ffffff" opacity="0.16" class="star-bg"/>
+  <circle cx="557.8" cy="156.5" r="0.73" fill="#ffffff" opacity="0.12" class="star-bg"/>
+  <circle cx="561.5" cy="239.9" r="0.36" fill="#ffffff" opacity="0.11" class="star-bg"/>
+
+  <!-- Mid stars -->
+  <circle cx="514.1" cy="35.3" r="0.71" fill="#00d4ff" opacity="0.45" class="star-mid"/>
+  <circle cx="397.4" cy="249.3" r="0.91" fill="#ffffff" opacity="0.48" class="star-mid"/>
+  <circle cx="253.3" cy="126.8" r="0.86" fill="#ffffff" opacity="0.16" class="star-mid"/>
+  <circle cx="141.0" cy="158.1" r="1.11" fill="#ffffff" opacity="0.29" class="star-mid"/>
+  <circle cx="744.9" cy="103.1" r="1.14" fill="#a78bfa" opacity="0.38" class="star-mid"/>
+  <circle cx="50.6" cy="89.4" r="0.89" fill="#ffffff" opacity="0.22" class="star-mid"/>
+  <circle cx="813.5" cy="55.6" r="1.14" fill="#ffffff" opacity="0.31" class="star-mid"/>
+  <circle cx="570.3" cy="15.5" r="1.15" fill="#ffffff" opacity="0.27" class="star-mid"/>
+  <circle cx="477.4" cy="32.8" r="0.72" fill="#ffb020" opacity="0.37" class="star-mid"/>
+  <circle cx="131.4" cy="120.3" r="1.03" fill="#ffffff" opacity="0.46" class="star-mid"/>
+  <circle cx="52.7" cy="207.0" r="0.94" fill="#ffffff" opacity="0.28" class="star-mid"/>
+  <circle cx="62.5" cy="89.7" r="1.18" fill="#ffffff" opacity="0.39" class="star-mid"/>
+  <circle cx="630.3" cy="269.1" r="0.75" fill="#00d4ff" opacity="0.42" class="star-mid"/>
+  <circle cx="718.1" cy="74.8" r="1.16" fill="#ffffff" opacity="0.34" class="star-mid"/>
+  <circle cx="404.6" cy="35.3" r="1.12" fill="#ffffff" opacity="0.28" class="star-mid"/>
+  <circle cx="164.9" cy="141.4" r="0.70" fill="#ffffff" opacity="0.22" class="star-mid"/>
+  <circle cx="739.0" cy="54.5" r="1.19" fill="#a78bfa" opacity="0.22" class="star-mid"/>
+  <circle cx="338.0" cy="161.0" r="0.68" fill="#ffffff" opacity="0.48" class="star-mid"/>
+  <circle cx="146.4" cy="269.7" r="0.61" fill="#ffffff" opacity="0.37" class="star-mid"/>
+  <circle cx="755.9" cy="233.1" r="1.08" fill="#ffffff" opacity="0.31" class="star-mid"/>
+
+  <!-- Foreground stars -->
+  <circle cx="337.6" cy="107.7" r="1.46" fill="#00d4ff" opacity="0.61" class="star-fg"/>
+  <circle cx="260.8" cy="78.8" r="1.04" fill="#ffffff" opacity="0.61" class="star-fg"/>
+  <circle cx="660.6" cy="219.7" r="1.42" fill="#ffffff" opacity="0.43" class="star-fg"/>
+  <circle cx="483.4" cy="196.7" r="1.17" fill="#ffffff" opacity="0.42" class="star-fg"/>
+  <circle cx="196.1" cy="263.5" r="1.66" fill="#a78bfa" opacity="0.64" class="star-fg"/>
+  <circle cx="838.2" cy="168.1" r="1.75" fill="#ffffff" opacity="0.68" class="star-fg"/>
+  <circle cx="564.6" cy="159.0" r="1.48" fill="#ffffff" opacity="0.58" class="star-fg"/>
+  <circle cx="664.9" cy="196.9" r="1.04" fill="#ffffff" opacity="0.55" class="star-fg"/>
+  <circle cx="760.6" cy="246.3" r="1.07" fill="#ffb020" opacity="0.42" class="star-fg"/>
+  <circle cx="674.3" cy="125.1" r="1.19" fill="#ffffff" opacity="0.41" class="star-fg"/>
+
+  <!-- Inner nebula -->
+  <circle cx="425" cy="155" r="70"
+          fill="#00d4ff"
+          opacity="0.04"
+          filter="url(#nebula-inner)"/>
+
+  <circle cx="365" cy="135" r="50"
+          fill="#a78bfa"
+          opacity="0.035"
+          filter="url(#nebula-inner)"/>
+
+  <circle cx="495" cy="170" r="45"
+          fill="#ffb020"
+          opacity="0.03"
+          filter="url(#nebula-inner)"/>
+
+  <!-- Shooting stars -->
+  <line x1="120" y1="30" x2="140" y2="35"
+        stroke="url(#shoot-grad)"
+        stroke-width="1.2"
+        stroke-linecap="round"
+        class="shooting-star"
+        style="animation-delay:0s;--shoot-tx:200px;--shoot-ty:80px;animation-duration:6s"/>
+
+  <line x1="650" y1="20" x2="670" y2="25"
+        stroke="url(#shoot-grad)"
+        stroke-width="1.2"
+        stroke-linecap="round"
+        class="shooting-star"
+        style="animation-delay:2.5s;--shoot-tx:180px;--shoot-ty:70px;animation-duration:8s"/>
+
+  <line x1="400" y1="250" x2="420" y2="255"
+        stroke="url(#shoot-grad)"
+        stroke-width="1.2"
+        stroke-linecap="round"
+        class="shooting-star"
+        style="animation-delay:5s;--shoot-tx:160px;--shoot-ty:60px;animation-duration:7s"/>
+
+  <!-- Spiral arms -->
+  <path d="M425 155 Q425 155 429.6 155.8 Q434.3 156.7 437.5 157.9 Q440.8 159.2 442.3 160.7 Q443.8 162.2 443.2 163.9 Q442.6 165.6 439.8 167.4 Q437.1 169.1 432 170.7 Q427 172.3 419.9 173.6 L412.7 174.9"
+        fill="none"
+        stroke="#a78bfa"
+        stroke-width="2"
+        opacity="0.5"
+        stroke-linecap="round"/>
+
+  <path d="M412.7 174.9 Q403.7 175.8 384.3 177.1 Q362.5 177.2 339.3 175.9 Q316.2 173.2 294.5 169 Q275.6 163.3 267 160.1"
+        fill="none"
+        stroke="#a78bfa"
+        stroke-width="1.7"
+        opacity="0.4"
+        stroke-linecap="round"/>
+
+  <path d="M267 160.1 Q260.8 156.3 251.4 148.3 Q248.2 144 248.5 139.4 Q248.8 134.8 252.9 130 Q265.2 120.6 285.6 111.6 Q313.9 103.3 330 99.4"
+        fill="none"
+        stroke="#a78bfa"
+        stroke-width="1.4"
+        opacity="0.3"
+        stroke-linecap="round"/>
+
+  <path d="M330 99.4 Q369.3 93.2 391.9 91 Q439.3 87.6 490.4 86.7 Q543.3 88.2 596 92.5 Q646.4 99.4 670.7 103.6"
+        fill="none"
+        stroke="#a78bfa"
+        stroke-width="1.1"
+        opacity="0.2"
+        stroke-linecap="round"/>
+
+  <path d="M425 155 Q425 155 419.6 155.5 Q408.4 155.9 396.7 155.3 Q385.7 153.7 376.5 151 Q367.9 145.5 367.8 143.3 L367.6 141"
+        fill="none"
+        stroke="#00d4ff"
+        stroke-width="2"
+        opacity="0.5"
+        stroke-linecap="round"/>
+
+  <path d="M367.6 141 Q372 136.2 376.8 133.9 Q389.1 129.3 406.5 125.2 Q428.6 122 454.7 119.9 Q483.9 119.2 499.1 119.3"
+        fill="none"
+        stroke="#00d4ff"
+        stroke-width="1.7"
+        opacity="0.4"
+        stroke-linecap="round"/>
+
+  <path d="M499.1 119.3 Q530.7 121.1 546.4 122.8 Q591.5 130 604.4 133.6 Q638.2 145.9 645.4 151 Q655.8 161.6 659.1 167.2"
+        fill="none"
+        stroke="#00d4ff"
+        stroke-width="1.4"
+        opacity="0.3"
+        stroke-linecap="round"/>
+
+  <path d="M659.1 167.2 Q656.9 178.9 651.1 184.9 Q634.6 196.6 608.5 207.8 Q573.1 217.9 529.1 226.4 Q477.7 232.8 450.3 235.5"
+        fill="none"
+        stroke="#00d4ff"
+        stroke-width="1.1"
+        opacity="0.2"
+        stroke-linecap="round"/>
+
+  <path d="M425 155 Q425.6 153.6 428.7 150.8 Q440.3 147.3 459.8 145.6 Q483.1 145.9 499.3 147.7"
+        fill="none"
+        stroke="#ffb020"
+        stroke-width="2"
+        opacity="0.5"
+        stroke-linecap="round"/>
+
+  <path d="M499.3 147.7 Q514.5 150.8 520.9 152.9 Q536.9 160.3 539.3 163.3 Q541.8 166.4 541.5 169.8 Q541.3 173.1 538 176.6 Q534.6 180.2 528.1 183.6 L521.5 187.1"
+        fill="none"
+        stroke="#ffb020"
+        stroke-width="1.7"
+        opacity="0.4"
+        stroke-linecap="round"/>
+
+  <path d="M521.5 187.1 Q501.8 193.6 488.7 196.5 Q459.8 201.5 425.7 205.2 Q387.3 207.2 346.2 207.3 Q325.1 206.8 303.8 205.2 L282.6 203.6"
+        fill="none"
+        stroke="#ffb020"
+        stroke-width="1.4"
+        opacity="0.3"
+        stroke-linecap="round"/>
+
+  <path d="M282.6 203.6 Q241.5 198.1 222.6 194.3 Q187.6 185.5 158.6 174.8 Q129.2 155.9 125.7 148.7 Q122.3 141.6 124.4 134.2 L126.5 126.8"
+        fill="none"
+        stroke="#ffb020"
+        stroke-width="1.1"
+        opacity="0.2"
+        stroke-linecap="round"/>
+
+  <!-- Tech dots -->
+  <circle cx="394.7" cy="176.8" r="2.5" fill="#a78bfa" opacity="0.85"/>
+  <circle cx="267" cy="160.1" r="2.5" fill="#a78bfa" opacity="0.85"/>
+  <circle cx="297.8" cy="107.2" r="2.5" fill="#a78bfa" opacity="0.85"/>
+
+  <circle cx="372" cy="136.2" r="2.5" fill="#00d4ff" opacity="0.85"/>
+  <circle cx="499.1" cy="119.3" r="2.5" fill="#00d4ff" opacity="0.85"/>
+  <circle cx="652.5" cy="156" r="2.5" fill="#00d4ff" opacity="0.85"/>
+
+  <circle cx="514.5" cy="150.8" r="2.5" fill="#ffb020" opacity="0.85"/>
+  <circle cx="521.5" cy="187.1" r="2.5" fill="#ffb020" opacity="0.85"/>
+  <circle cx="325.1" cy="206.8" r="2.5" fill="#ffb020" opacity="0.85"/>
+
+  <!-- Tech labels -->
+  <text x="380.1" y="190.3"
+        text-anchor="end"
+        fill="#a78bfa"
+        font-size="9"
+        font-family="monospace">TypeScript</text>
+
+  <text x="249" y="163.7"
+        text-anchor="end"
+        fill="#a78bfa"
+        font-size="9"
+        font-family="monospace">React</text>
+
+  <text x="281" y="103.8"
+        text-anchor="end"
+        fill="#a78bfa"
+        font-size="9"
+        font-family="monospace">CSS</text>
+
+  <text x="355.1" y="133.2"
+        text-anchor="end"
+        fill="#00d4ff"
+        font-size="9"
+        font-family="monospace">Python</text>
+
+  <text x="515.3" y="114.5"
+        text-anchor="start"
+        fill="#00d4ff"
+        font-size="9"
+        font-family="monospace">Node.js</text>
+
+  <text x="670.5" y="159.1"
+        text-anchor="start"
+        fill="#00d4ff"
+        font-size="9"
+        font-family="monospace">PostgreSQL</text>
+
+  <text x="532.5" y="152.9"
+        text-anchor="start"
+        fill="#ffb020"
+        font-size="9"
+        font-family="monospace">Docker</text>
+
+  <text x="538.6" y="195.8"
+        text-anchor="start"
+        fill="#ffb020"
+        font-size="9"
+        font-family="monospace">GitHub Actions</text>
+
+  <text x="309.1" y="218.1"
+        text-anchor="end"
+        fill="#ffb020"
+        font-size="9"
+        font-family="monospace">AWS</text>
+
+  <!-- Project stars -->
+  <circle cx="464.1" cy="86.5" r="4"
+          fill="#a78bfa"
+          filter="url(#star-glow-0)">
+    <animate attributeName="opacity"
+             values="0.6;1;0.6"
+             dur="4s"
              repeatCount="indefinite"/>
-
   </circle>
 
+  <circle cx="623.9" cy="202.4" r="4"
+          fill="#00d4ff"
+          filter="url(#star-glow-1)">
+    <animate attributeName="opacity"
+             values="0.6;1;0.6"
+             dur="4s"
+             begin="0.8s"
+             repeatCount="indefinite"/>
+  </circle>
 
-  <!-- ================================================= -->
-  <!-- CENTRAL ORBIT -->
-  <!-- ================================================= -->
-
-  <circle cx="425"
-          cy="140"
-          r="27"
-          fill="none"
-          stroke="#22d3ee"
-          stroke-width=".8"
-          stroke-dasharray="3 5"
-          opacity=".7">
-
+  <!-- Orbital rings -->
+  <ellipse cx="425"
+           cy="155"
+           rx="55"
+           ry="18"
+           fill="none"
+           stroke="#00d4ff"
+           stroke-width="0.6"
+           opacity="0.15"
+           stroke-dasharray="4 6">
     <animateTransform
       attributeName="transform"
       type="rotate"
-      from="0 425 140"
-      to="360 425 140"
-      dur="5s"
+      from="0 425 155"
+      to="360 425 155"
+      dur="20s"
       repeatCount="indefinite"/>
+  </ellipse>
 
-  </circle>
+  <ellipse cx="425"
+           cy="155"
+           rx="75"
+           ry="24"
+           fill="none"
+           stroke="#a78bfa"
+           stroke-width="0.5"
+           opacity="0.1"
+           stroke-dasharray="3 8">
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="360 425 155"
+      to="0 425 155"
+      dur="30s"
+      repeatCount="indefinite"/>
+  </ellipse>
 
+  <!-- Galaxy core -->
+  <circle cx="425"
+          cy="155"
+          r="40"
+          fill="url(#core-haze-gradient)"
+          opacity="0.4"/>
 
   <circle cx="425"
-          cy="140"
-          r="19"
-          fill="#0b1628"
-          stroke="#38bdf8"
-          stroke-width="1.5"
-          filter="url(#glow)"/>
+          cy="155"
+          r="24"
+          fill="url(#core-inner-gradient)"
+          opacity="0.6"/>
 
+  <ellipse cx="425"
+           cy="155"
+           rx="20"
+           ry="18"
+           fill="none"
+           stroke="#00d4ff"
+           stroke-width="1.2"
+           opacity="0.55"
+           stroke-dasharray="5 3"
+           class="core-ring"/>
 
   <circle cx="425"
-          cy="140"
-          r="10"
-          fill="#0f172a"
-          stroke="#67e8f9"
-          stroke-width=".8"/>
+          cy="155"
+          r="14"
+          fill="none"
+          stroke="#a78bfa"
+          stroke-width="0.8"
+          opacity="0.4"
+          class="core-ring-inner"/>
 
+  <circle cx="425"
+          cy="155"
+          r="11"
+          fill="#0f1623"
+          stroke="#1a2332"
+          stroke-width="0.5"/>
 
+  <circle cx="425"
+          cy="155"
+          r="3"
+          fill="#00d4ff"
+          filter="url(#core-bright-glow)"
+          opacity="0.9"/>
+
+  <!-- Your initial -->
   <text x="425"
-        y="145"
+        y="160"
         text-anchor="middle"
-        fill="#e0f2fe"
-        font-size="10"
-        font-family="monospace"
-        font-weight="bold">
-    M
-  </text>
+        fill="#00d4ff"
+        font-size="14"
+        font-weight="bold"
+        font-family="monospace">M</text>
 
-
-  <!-- ================================================= -->
-  <!-- TECH NODES -->
-  <!-- ================================================= -->
-
-  <g font-family="monospace"
-     font-size="7">
-
-    <circle cx="295"
-            cy="91"
-            r="2"
-            fill="#3776ab"
-            filter="url(#glow)"/>
-
-    <text x="282"
-          y="87"
-          fill="#60a5fa">
-      Python
-    </text>
-
-
-    <circle cx="245"
-            cy="164"
-            r="2"
-            fill="#f59e0b"
-            filter="url(#glow)"/>
-
-    <text x="220"
-          y="177"
-          fill="#fbbf24">
-      HTML5
-    </text>
-
-
-    <circle cx="340"
-            cy="202"
-            r="2"
-            fill="#a78bfa"
-            filter="url(#glow)"/>
-
-    <text x="324"
-          y="216"
-          fill="#c4b5fd">
-      CSS
-    </text>
-
-
-    <circle cx="510"
-            cy="93"
-            r="2"
-            fill="#22d3ee"
-            filter="url(#glow)"/>
-
-    <text x="518"
-          y="88"
-          fill="#67e8f9">
-      C
-    </text>
-
-
-    <circle cx="565"
-            cy="175"
-            r="2"
-            fill="#f59e0b"
-            filter="url(#glow)"/>
-
-    <text x="574"
-          y="181"
-          fill="#fbbf24">
-      Docker
-    </text>
-
-
-    <circle cx="650"
-            cy="143"
-            r="2"
-            fill="#a78bfa"
-            filter="url(#glow)"/>
-
-    <text x="660"
-          y="139"
-          fill="#c4b5fd">
-      GitHub Actions
-    </text>
-
-
-    <circle cx="720"
-            cy="104"
-            r="2"
-            fill="#22d3ee"
-            filter="url(#glow)"/>
-
-    <text x="728"
-          y="100"
-          fill="#67e8f9">
-      MongoDB
-    </text>
-
-
-    <circle cx="165"
-            cy="120"
-            r="2"
-            fill="#f59e0b"
-            filter="url(#glow)"/>
-
-    <text x="130"
-          y="116"
-          fill="#fbbf24">
-      Git
-    </text>
-
-  </g>
-
-
-  <!-- ================================================= -->
-  <!-- TITLE -->
-  <!-- ================================================= -->
-
+  <!-- YOUR PROFILE -->
   <text x="425"
-        y="25"
+        y="26"
         text-anchor="middle"
-        fill="#e2e8f0"
-        font-size="16"
-        font-family="sans-serif"
-        font-weight="700">
-    Mohammed
-  </text>
-
+        fill="#f1f5f9"
+        font-size="20"
+        font-weight="bold"
+        font-family="sans-serif">Mohammed</text>
 
   <text x="425"
-        y="39"
+        y="44"
+        text-anchor="middle"
+        fill="#94a3b8"
+        font-size="12"
+        font-family="sans-serif">Full Stack Developer • Open Source Creator</text>
+
+  <text x="425"
+        y="268"
         text-anchor="middle"
         fill="#64748b"
-        font-size="8"
-        font-family="sans-serif">
-    Full Stack Developer • Open Source Creator
-  </text>
-
-
-  <!-- ================================================= -->
-  <!-- QUOTE -->
-  <!-- ================================================= -->
-
-  <text x="425"
-        y="265"
-        text-anchor="middle"
-        fill="#64748b"
-        font-size="8"
+        font-size="11"
         font-family="monospace"
-        font-style="italic">
-    "The best code is the code that empowers others."
-  </text>
-
-
-  <!-- ================================================= -->
-  <!-- EXTRA FLOATING PARTICLES -->
-  <!-- ================================================= -->
-
-  <g fill="#22d3ee">
-
-    <circle cx="190" cy="95" r="1.5">
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        values="0 0;8 -5;0 0"
-        dur="4s"
-        repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="610" cy="190" r="1.5">
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        values="0 0;-8 5;0 0"
-        dur="5s"
-        repeatCount="indefinite"/>
-    </circle>
-
-    <circle cx="730" cy="165" r="1.2">
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        values="0 0;5 -8;0 0"
-        dur="3.5s"
-        repeatCount="indefinite"/>
-    </circle>
-
-  </g>
+        font-style="italic">&quot;The best code is the code that empowers others.&quot;</text>
 
 </svg>
