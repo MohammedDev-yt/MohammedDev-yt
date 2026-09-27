@@ -1,268 +1,474 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="1200"
-     height="250"
-     viewBox="0 0 1200 250">
+     width="850"
+     height="180"
+     viewBox="0 0 850 180">
 
   <defs>
+
+    <!-- Background -->
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b1423"/>
-      <stop offset="50%" stop-color="#101d32"/>
-      <stop offset="100%" stop-color="#080f1c"/>
+      <stop offset="0%" stop-color="#0f1623"/>
+      <stop offset="50%" stop-color="#0b1321"/>
+      <stop offset="100%" stop-color="#080e19"/>
     </linearGradient>
 
-    <linearGradient id="titleGradient"
-                    x1="0%" y1="0%"
-                    x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#55b7df">
-        <animate attributeName="stop-color"
-                 values="#55b7df;#9c82ef;#38c7d1;#55b7df"
-                 dur="6s"
-                 repeatCount="indefinite"/>
-      </stop>
-
-      <stop offset="50%" stop-color="#9c82ef">
-        <animate attributeName="stop-color"
-                 values="#9c82ef;#38c7d1;#55b7df;#9c82ef"
-                 dur="6s"
-                 repeatCount="indefinite"/>
-      </stop>
-
-      <stop offset="100%" stop-color="#38c7d1">
-        <animate attributeName="stop-color"
-                 values="#38c7d1;#55b7df;#9c82ef;#38c7d1"
-                 dur="6s"
-                 repeatCount="indefinite"/>
-      </stop>
-    </linearGradient>
-
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <!-- Number glow -->
+    <filter id="numGlow"
+            x="-50%"
+            y="-50%"
+            width="200%"
+            height="200%">
+      <feGaussianBlur stdDeviation="4"/>
     </filter>
+
+    <!-- Icon glow -->
+    <filter id="iconGlow"
+            x="-100%"
+            y="-100%"
+            width="300%"
+            height="300%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+
+    <!-- Animated accent -->
+    <linearGradient id="accent">
+      <stop offset="0%" stop-color="#00d4ff">
+        <animate attributeName="stop-color"
+                 values="#00d4ff;#a78bfa;#ff4ecd;#00d4ff"
+                 dur="8s"
+                 repeatCount="indefinite"/>
+      </stop>
+
+      <stop offset="100%" stop-color="#a78bfa">
+        <animate attributeName="stop-color"
+                 values="#a78bfa;#ff4ecd;#00d4ff;#a78bfa"
+                 dur="8s"
+                 repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
   </defs>
 
-  <!-- Background -->
-  <rect width="1200"
-        height="250"
-        rx="18"
-        fill="url(#bg)"
-        stroke="#17243a"
-        stroke-width="2"/>
 
-  <!-- Subtle animated border -->
-  <rect x="1"
-        y="1"
-        width="1198"
-        height="248"
-        rx="17"
-        fill="none"
-        stroke="url(#titleGradient)"
-        stroke-width="1"
+  <!-- CARD -->
+  <rect x=".5"
+        y=".5"
+        width="849"
+        height="179"
+        rx="14"
+        fill="url(#bg)"
+        stroke="#1a2332"
+        stroke-width="1"/>
+
+
+  <!-- TOP ACCENT LINE -->
+  <rect x="30"
+        y="48"
+        width="790"
+        height="1"
+        fill="url(#accent)"
         opacity=".35"/>
 
-  <!-- Header -->
-  <text x="55"
-        y="48"
-        fill="url(#titleGradient)"
-        font-family="Arial, sans-serif"
-        font-size="12"
-        font-weight="700"
-        letter-spacing="4">
+
+  <!-- TITLE -->
+  <text x="30"
+        y="35"
+        fill="#64748b"
+        font-size="11"
+        font-family="monospace"
+        letter-spacing="3">
     MISSION TELEMETRY
   </text>
 
-  <!-- Animated scanning line -->
-  <rect x="55"
-        y="61"
-        width="1090"
-        height="1"
-        fill="#263752"
-        opacity=".7"/>
 
-  <rect x="55"
-        y="61"
-        width="140"
-        height="1"
-        fill="#38c7d1"
-        filter="url(#glow)">
-    <animate attributeName="x"
-             values="55;1005;55"
-             dur="5s"
+  <!-- ONLINE STATUS -->
+  <circle cx="798"
+          cy="31"
+          r="3"
+          fill="#22c4df">
+
+    <animate attributeName="opacity"
+             values=".3;1;.3"
+             dur="2s"
              repeatCount="indefinite"/>
-  </rect>
 
-  <!-- Stat separators -->
-  <g stroke="#1d2a3f"
-     stroke-width="1">
+    <animate attributeName="r"
+             values="2.5;4;2.5"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </circle>
 
-    <path d="M270 78V184"/>
-    <path d="M510 78V184"/>
-    <path d="M750 78V184"/>
-    <path d="M990 78V184"/>
-
-  </g>
-
-  <!-- Icons -->
-  <g font-family="Arial, sans-serif"
-     font-size="18"
-     text-anchor="middle">
-
-    <text x="150" y="95" fill="#55b7df" filter="url(#glow)">
-      ✦
-    </text>
-
-    <text x="390" y="95" fill="#d5a23d" filter="url(#glow)">
-      ★
-    </text>
-
-    <text x="630" y="95" fill="#9c82ef" filter="url(#glow)">
-      ◈
-    </text>
-
-    <text x="870" y="95" fill="#38c7d1" filter="url(#glow)">
-      ◉
-    </text>
-
-    <text x="1090" y="95" fill="#9c82ef" filter="url(#glow)">
-      ▣
-    </text>
-
-  </g>
-
-  <!-- Main numbers -->
-  <g fill="#eaf2ff"
-     font-family="Arial, sans-serif"
-     font-size="34"
-     font-weight="700"
-     text-anchor="middle">
-
-    <text x="150" y="135">
-      551
-    </text>
-
-    <text x="390" y="135">
-      69
-    </text>
-
-    <text x="630" y="135">
-      0
-    </text>
-
-    <text x="870" y="135">
-      0
-    </text>
-
-    <text x="1090" y="135">
-      9
-    </text>
-
-  </g>
-
-  <!-- Labels -->
-  <g fill="#738198"
-     font-family="Arial, sans-serif"
-     font-size="12"
-     text-anchor="middle">
-
-    <text x="150" y="163">Commits</text>
-    <text x="390" y="163">Stars</text>
-    <text x="630" y="163">PRs</text>
-    <text x="870" y="163">Issues</text>
-    <text x="1090" y="163">Repos</text>
-
-  </g>
-
-  <!-- Status indicators -->
-  <g font-family="Arial, sans-serif"
-     font-size="9"
-     text-anchor="middle">
-
-    <circle cx="150" cy="188" r="3" fill="#38c7d1">
-      <animate attributeName="opacity"
-               values=".3;1;.3"
-               dur="1.5s"
-               repeatCount="indefinite"/>
-    </circle>
-
-    <text x="163" y="192" fill="#52627a">
-      ACTIVE
-    </text>
-
-
-    <circle cx="390" cy="188" r="3" fill="#d5a23d">
-      <animate attributeName="opacity"
-               values=".3;1;.3"
-               dur="2s"
-               repeatCount="indefinite"/>
-    </circle>
-
-    <text x="403" y="192" fill="#52627a">
-      TRACKED
-    </text>
-
-
-    <circle cx="630" cy="188" r="3" fill="#9c82ef">
-      <animate attributeName="opacity"
-               values=".3;1;.3"
-               dur="2.4s"
-               repeatCount="indefinite"/>
-    </circle>
-
-    <text x="643" y="192" fill="#52627a">
-      MONITORED
-    </text>
-
-
-    <circle cx="870" cy="188" r="3" fill="#38c7d1">
-      <animate attributeName="opacity"
-               values=".3;1;.3"
-               dur="1.8s"
-               repeatCount="indefinite"/>
-    </circle>
-
-    <text x="883" y="192" fill="#52627a">
-      STABLE
-    </text>
-
-
-    <circle cx="1090" cy="188" r="3" fill="#9c82ef">
-      <animate attributeName="opacity"
-               values=".3;1;.3"
-               dur="2.2s"
-               repeatCount="indefinite"/>
-    </circle>
-
-    <text x="1103" y="192" fill="#52627a">
-      ONLINE
-    </text>
-
-  </g>
-
-  <!-- Bottom telemetry line -->
-  <path d="M55 215 H1145"
-        stroke="#17243a"
-        stroke-width="1"/>
-
-  <text x="55"
-        y="232"
-        fill="#52627a"
-        font-family="Arial, sans-serif"
-        font-size="9"
-        letter-spacing="2">
-    SYSTEM STATUS
+  <text x="815"
+        y="35"
+        text-anchor="end"
+        fill="#56647a"
+        font-size="10"
+        font-family="monospace">
+    ONLINE
   </text>
 
-  <text x="1145"
-        y="232"
-        text-anchor="end"
-        fill="#38c7d1"
-        font-family="Arial, sans-serif"
-        font-size="9"
+
+  <!-- DIVIDERS -->
+  <g stroke="#1a2332"
+     stroke-width="1"
+     opacity=".7">
+
+    <line x1="170" y1="60" x2="170" y2="155"/>
+    <line x1="340" y1="60" x2="340" y2="155"/>
+    <line x1="510" y1="60" x2="510" y2="155"/>
+    <line x1="680" y1="60" x2="680" y2="155"/>
+
+  </g>
+
+
+  <!-- ========================= -->
+  <!-- COMMITS -->
+  <!-- ========================= -->
+
+  <g transform="translate(85 105)">
+
+    <!-- icon glow -->
+    <circle cx="0"
+            cy="-28"
+            r="12"
+            fill="#00d4ff"
+            opacity=".12"
+            filter="url(#iconGlow)"/>
+
+    <!-- icon -->
+    <circle cx="0"
+            cy="-28"
+            r="7"
+            fill="none"
+            stroke="#00d4ff"
+            stroke-width="1.5">
+
+      <animate attributeName="stroke-opacity"
+               values=".5;1;.5"
+               dur="4s"
+               repeatCount="indefinite"/>
+
+    </circle>
+
+    <path d="M-7 -28H7"
+          stroke="#00d4ff"
+          stroke-width="1.5"/>
+
+    <!-- number glow -->
+    <text x="0"
+          y="7"
+          text-anchor="middle"
+          fill="#00d4ff"
+          font-size="28"
+          font-weight="700"
+          font-family="Arial, sans-serif"
+          opacity=".45"
+          filter="url(#numGlow)">
+      1.8k
+    </text>
+
+    <!-- number -->
+    <text x="0"
+          y="7"
+          text-anchor="middle"
+          fill="#f1f5f9"
+          font-size="28"
+          font-weight="700"
+          font-family="Arial, sans-serif">
+      1.8k
+    </text>
+
+    <text x="0"
+          y="27"
+          text-anchor="middle"
+          fill="#64748b"
+          font-size="10"
+          font-family="monospace"
+          letter-spacing="1">
+      COMMITS
+    </text>
+
+  </g>
+
+
+  <!-- ========================= -->
+  <!-- STARS -->
+  <!-- ========================= -->
+
+  <g transform="translate(255 105)">
+
+    <circle cx="0"
+            cy="-28"
+            r="12"
+            fill="#ffb020"
+            opacity=".12"
+            filter="url(#iconGlow)"/>
+
+    <path d="
+      M0 -36
+      L2.3 -30.3
+      L8.5 -30
+      L3.7 -26
+      L5.2 -20
+      L0 -23.3
+      L-5.2 -20
+      L-3.7 -26
+      L-8.5 -30
+      L-2.3 -30.3 Z"
+      fill="#ffb020">
+
+      <animate attributeName="opacity"
+               values=".55;1;.55"
+               dur="4s"
+               repeatCount="indefinite"/>
+
+    </path>
+
+    <text x="0"
+          y="7"
+          text-anchor="middle"
+          fill="#ffb020"
+          font-size="28"
+          font-weight="700"
+          font-family="Arial, sans-serif"
+          opacity=".45"
+          filter="url(#numGlow)">
+      342
+    </text>
+
+    <text x="0"
+          y="7"
+          text-anchor="middle"
+          fill="#f1f5f9"
+          font-size="28"
+          font-weight="700"
+          font-family="Arial, sans-serif">
+      342
+    </text>
+
+    <text x="0"
+          y="27"
+          text-anchor="middle"
+          fill="#64748b"
+          font-size="10"
+          font-family="monospace"
+          letter-spacing="1">
+      STARS
+    </text>
+
+  </g>
+
+
+  <!-- ========================= -->
+  <!-- PULL REQUESTS -->
+  <!-- ========================= -->
+
+  <g transform="translate(425 105)">
+
+    <circle cx="0"
+            cy="-28"
+            r="12"
+            fill="#a78bfa"
+            opacity=".12"
+            filter="url(#iconGlow)"/>
+
+    <!-- PR icon -->
+    <circle cx="-5"
+            cy="-34"
+            r="3"
+            fill="none"
+            stroke="#a78bfa"
+            stroke-width="1.5"/>
+
+    <circle cx="5"
+            cy="-22"
+            r="3"
+            fill="none"
+            stroke="#a78bfa"
+            stroke-width="1.5"/>
+
+    <path d="M-5 -31V-24
+             Q-5 -22 0 -22H2"
+          fill="none"
+          stroke="#a78bfa"
+          stroke-width="1.5"/>
+
+    <text x="0"
+          y="7"
+          text-anchor="middle"
+          fill="#a78bfa"
+          font-size="28"
+          font-weight="700"
+          font-family="Arial, sans-serif"
+          opacity=".45"
+          filter="url(#numGlow)">
+      156
+    </text>
+
+    <text x="0"
+          y="7"
+          text-anchor="middle"
+          fill="#f1f5f9"
+          font-size="28"
+          font-weight="700"
+          font-family="Arial, sans-serif">
+      156
+    </text>
+
+    <text x="0"
+          y="27"
+          text-anchor="middle"
+          fill="#64748b"
+          font-size="10"
+          font-family="monospace"
+          letter-spacing="1">
+      PULL REQUESTS
+    </text>
+
+  </g>
+
+
+  <!-- ========================= -->
+  <!-- ISSUES -->
+  <!-- ========================= -->
+
+  <g transform="translate(595 105)">
+
+    <circle cx="0"
+            cy="-28"
+            r="12"
+            fill="#00d4ff"
+            opacity=".12"
+            filter="url(#iconGlow)"/>
+
+    <circle cx="0"
+            cy="-28"
+            r="8"
+            fill="none"
+            stroke="#00d4ff"
+            stroke-width="1.5"/>
+
+    <circle cx="0"
+            cy="-28"
+            r="2"
+            fill="#00d4ff"/>
+
+    <text x="0"
+          y="7"
+          text-anchor="middle"
+          fill="#00d4ff"
+          font-size="28"
+          font-weight="700"
+          font-family="Arial, sans-serif"
+          opacity=".45"
+          filter="url(#numGlow)">
+      89
+    </text>
+
+    <text x="0"
+          y="7"
+          text-anchor="middle"
+          fill="#f1f5f9"
+          font-size="28"
+          font-weight="700"
+          font-family="Arial, sans-serif">
+      89
+    </text>
+
+    <text x="0"
+          y="27"
+          text-anchor="middle"
+          fill="#64748b"
+          font-size="10"
+          font-family="monospace"
+          letter-spacing="1">
+      ISSUES
+    </text>
+
+  </g>
+
+
+  <!-- ========================= -->
+  <!-- REPOSITORIES -->
+  <!-- ========================= -->
+
+  <g transform="translate(765 105)">
+
+    <circle cx="0"
+            cy="-28"
+            r="12"
+            fill="#a78bfa"
+            opacity=".12"
+            filter="url(#iconGlow)"/>
+
+    <!-- repository icon -->
+    <rect x="-7"
+          y="-36"
+          width="14"
+          height="15"
+          rx="2"
+          fill="none"
+          stroke="#a78bfa"
+          stroke-width="1.5"/>
+
+    <line x1="-4"
+          y1="-32"
+          x2="4"
+          y2="-32"
+          stroke="#a78bfa"
+          stroke-width="1"/>
+
+    <line x1="-4"
+          y1="-28"
+          x2="4"
+          y2="-28"
+          stroke="#a78bfa"
+          stroke-width="1"/>
+
+    <text x="0"
+          y="7"
+          text-anchor="middle"
+          fill="#a78bfa"
+          font-size="28"
+          font-weight="700"
+          font-family="Arial, sans-serif"
+          opacity=".45"
+          filter="url(#numGlow)">
+      42
+    </text>
+
+    <text x="0"
+          y="7"
+          text-anchor="middle"
+          fill="#f1f5f9"
+          font-size="28"
+          font-weight="700"
+          font-family="Arial, sans-serif">
+      42
+    </text>
+
+    <text x="0"
+          y="27"
+          text-anchor="middle"
+          fill="#64748b"
+          font-size="10"
+          font-family="monospace"
+          letter-spacing="1">
+      REPOSITORIES
+    </text>
+
+  </g>
+
+
+  <!-- BOTTOM STATUS -->
+  <text x="425"
+        y="168"
+        text-anchor="middle"
+        fill="#334155"
+        font-size="8"
+        font-family="monospace"
         letter-spacing="2">
-    ONLINE • TELEMETRY ACTIVE
+    GITHUB DEVELOPMENT TELEMETRY
   </text>
 
 </svg>
