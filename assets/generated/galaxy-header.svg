@@ -374,19 +374,19 @@
         text-anchor="end"
         fill="#a78bfa"
         font-size="9"
-        font-family="monospace">TypeScript</text>
+        font-family="monospace">HTML5</text>
 
   <text x="249" y="163.7"
         text-anchor="end"
         fill="#a78bfa"
         font-size="9"
-        font-family="monospace">React</text>
+        font-family="monospace">CSS3</text>
 
   <text x="281" y="103.8"
         text-anchor="end"
         fill="#a78bfa"
         font-size="9"
-        font-family="monospace">CSS</text>
+        font-family="monospace">C</text>
 
   <text x="355.1" y="133.2"
         text-anchor="end"
@@ -398,13 +398,13 @@
         text-anchor="start"
         fill="#00d4ff"
         font-size="9"
-        font-family="monospace">Node.js</text>
+        font-family="monospace">Git</text>
 
   <text x="670.5" y="159.1"
         text-anchor="start"
         fill="#00d4ff"
         font-size="9"
-        font-family="monospace">PostgreSQL</text>
+        font-family="monospace">MongoDB</text>
 
   <text x="532.5" y="152.9"
         text-anchor="start"
@@ -422,7 +422,7 @@
         text-anchor="end"
         fill="#ffb020"
         font-size="9"
-        font-family="monospace">AWS</text>
+        font-family="monospace">TypeScript</text>
 
   <!-- Project stars -->
   <circle cx="464.1" cy="86.5" r="4"
@@ -559,6 +559,6 @@
         fill="#64748b"
         font-size="11"
         font-family="monospace"
-        font-style="italic">&quot;The best code is the code that empowers others.&quot;</text>
+        font-style="bold">&quot;Create your own orbit in the universe of technology.&quot;</text>
 
 </svg>
