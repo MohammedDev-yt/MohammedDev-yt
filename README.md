@@ -43,28 +43,44 @@
 </p>
 
 
-## Preview
+## 🚀 Preview
 
 <div align="center">
-  <img src="./assets/generated/galaxy-header.svg" width="850" alt="Galaxy Header"/>
-</div>
 
-<br/>
+  <!-- Galaxy Header -->
+  <img
+    src="./assets/generated/galaxy-header.svg"
+    width="850"
+    alt="Mohammed Galaxy Header"
+  />
 
-<div align="center">
-  <img src="./assets/generated/stats-card.svg" width="850" alt="Mission Telemetry"/>
-</div>
+  <br/><br/>
 
-<br/>
+  <!-- Mission Telemetry -->
+  <img
+    src="./assets/generated/stats-card.svg"
+    width="850"
+    alt="Mission Telemetry"
+  />
 
-<div align="center">
-  <img src="./assets/generated/tech-stack.svg" width="850" alt="Tech Stack"/>
-</div>
+  <br/><br/>
 
-<br/>
+  <!-- Language Telemetry -->
+  <img
+    src="./assets/generated/tech-stack.svg"
+    width="850"
+    alt="Language and Focus Telemetry"
+  />
 
-<div align="center">
-  <img src="./assets/generated/projects-constellation.svg" width="850" alt="Featured Projects"/>
+  <br/><br/>
+
+  <!-- Featured Systems -->
+  <img
+    src="./assets/generated/projects-constellation.svg"
+    width="850"
+    alt="Featured Systems"
+  />
+
 </div>
 
 ## 📝 Languages & Skills
