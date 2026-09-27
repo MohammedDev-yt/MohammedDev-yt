@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#17233b"/>
+      <stop offset="100%" stop-color="#060a13"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="300" rx="18" fill="url(#bg)"/>
+
+  <g fill="#ffffff" opacity=".7">
+    <circle cx="80" cy="70" r="1"/>
+    <circle cx="180" cy="125" r="1.5"/>
+    <circle cx="310" cy="48" r="1"/>
+    <circle cx="900" cy="65" r="1.2"/>
+    <circle cx="1080" cy="115" r="1"/>
+    <circle cx="1140" cy="220" r="1.5"/>
+    <circle cx="690" cy="55" r="1"/>
+    <circle cx="470" cy="235" r="1.2"/>
+  </g>
+
+  <g fill="none" stroke-width="1.5" opacity=".75">
+    <ellipse cx="600" cy="155" rx="390" ry="70" stroke="#3a9fdc"/>
+    <ellipse cx="600" cy="155" rx="300" ry="48"
+             stroke="#6f63d9"
+             transform="rotate(18 600 155)"/>
+    <ellipse cx="600" cy="155" rx="250" ry="105"
+             stroke="#d39b32"
+             transform="rotate(-20 600 155)"/>
+  </g>
+
+  <g font-family="Arial, sans-serif">
+    <text x="600" y="58"
+          text-anchor="middle"
+          fill="#ffffff"
+          font-size="25"
+          font-weight="700">
+      Mohammed
+    </text>
+
+    <text x="600" y="82"
+          text-anchor="middle"
+          fill="#9aa7bb"
+          font-size="13">
+      Full Stack Developer • Open Source Creator
+    </text>
+
+    <circle cx="600" cy="155" r="25"
+            fill="#0d1728"
+            stroke="#23c9df"
+            stroke-width="2"
+            filter="url(#glow)"/>
+
+    <text x="600" y="163"
+          text-anchor="middle"
+          fill="#23c9df"
+          font-size="17"
+          font-weight="700">
+      M
+    </text>
+
+    <g font-size="12">
+      <text x="285" y="126" fill="#55b7df">Python</text>
+      <text x="360" y="105" fill="#9c82ef">HTML5</text>
+      <text x="785" y="110" fill="#39c8c5">C</text>
+      <text x="850" y="150" fill="#d5a23d">Docker</text>
+      <text x="780" y="215" fill="#6fa7e8">GitHub Actions</text>
+      <text x="370" y="215" fill="#66b3e8">Git</text>
+      <text x="250" y="178" fill="#b7a9e8">CSS</text>
+      <text x="920" y="190" fill="#3fb2cc">MongoDB</text>
+    </g>
+
+    <text x="600" y="270"
+          text-anchor="middle"
+          fill="#768398"
+          font-size="12"
+          font-style="italic">
+      "The best code is the code that empowers others."
+    </text>
+  </g>
+</svg>
