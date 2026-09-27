@@ -1,9 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200"
+     height="300"
+     viewBox="0 0 1200 300">
+
   <defs>
     <radialGradient id="bg" cx="50%" cy="50%" r="70%">
       <stop offset="0%" stop-color="#17233b"/>
       <stop offset="100%" stop-color="#060a13"/>
     </radialGradient>
+
     <filter id="glow">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
@@ -11,78 +16,244 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+
+    <!-- Animated text gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d9ff">
+        <animate attributeName="stop-color"
+                 values="#00d9ff;#8b5cf6;#ff4ecd;#00d9ff"
+                 dur="6s"
+                 repeatCount="indefinite"/>
+      </stop>
+
+      <stop offset="50%" stop-color="#8b5cf6">
+        <animate attributeName="stop-color"
+                 values="#8b5cf6;#ff4ecd;#00d9ff;#8b5cf6"
+                 dur="6s"
+                 repeatCount="indefinite"/>
+      </stop>
+
+      <stop offset="100%" stop-color="#ff4ecd">
+        <animate attributeName="stop-color"
+                 values="#ff4ecd;#00d9ff;#8b5cf6;#ff4ecd"
+                 dur="6s"
+                 repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
   </defs>
 
-  <rect width="1200" height="300" rx="18" fill="url(#bg)"/>
+  <!-- Background -->
+  <rect width="1200"
+        height="300"
+        rx="18"
+        fill="url(#bg)"/>
 
-  <g fill="#ffffff" opacity=".7">
-    <circle cx="80" cy="70" r="1"/>
-    <circle cx="180" cy="125" r="1.5"/>
-    <circle cx="310" cy="48" r="1"/>
-    <circle cx="900" cy="65" r="1.2"/>
-    <circle cx="1080" cy="115" r="1"/>
-    <circle cx="1140" cy="220" r="1.5"/>
-    <circle cx="690" cy="55" r="1"/>
-    <circle cx="470" cy="235" r="1.2"/>
+  <!-- Stars -->
+  <g fill="#ffffff">
+
+    <circle cx="80" cy="70" r="1">
+      <animate attributeName="opacity"
+               values=".2;1;.2"
+               dur="2s"
+               repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="180" cy="125" r="1.5">
+      <animate attributeName="opacity"
+               values="1;.2;1"
+               dur="3s"
+               repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="310" cy="48" r="1">
+      <animate attributeName="opacity"
+               values=".2;1;.2"
+               dur="2.5s"
+               repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="900" cy="65" r="1.2">
+      <animate attributeName="opacity"
+               values="1;.2;1"
+               dur="2.2s"
+               repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="1080" cy="115" r="1">
+      <animate attributeName="opacity"
+               values=".2;1;.2"
+               dur="2.8s"
+               repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="1140" cy="220" r="1.5">
+      <animate attributeName="opacity"
+               values="1;.2;1"
+               dur="3s"
+               repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="690" cy="55" r="1">
+      <animate attributeName="opacity"
+               values=".2;1;.2"
+               dur="2.4s"
+               repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="470" cy="235" r="1.2">
+      <animate attributeName="opacity"
+               values="1;.2;1"
+               dur="2.6s"
+               repeatCount="indefinite"/>
+    </circle>
+
   </g>
 
-  <g fill="none" stroke-width="1.5" opacity=".75">
-    <ellipse cx="600" cy="155" rx="390" ry="70" stroke="#3a9fdc"/>
-    <ellipse cx="600" cy="155" rx="300" ry="48"
+  <!-- Rotating galaxy -->
+  <g fill="none"
+     stroke-width="1.5"
+     opacity=".75">
+
+    <ellipse cx="600"
+             cy="155"
+             rx="390"
+             ry="70"
+             stroke="#3a9fdc">
+
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 600 155"
+        to="360 600 155"
+        dur="18s"
+        repeatCount="indefinite"/>
+
+    </ellipse>
+
+    <ellipse cx="600"
+             cy="155"
+             rx="300"
+             ry="48"
              stroke="#6f63d9"
-             transform="rotate(18 600 155)"/>
-    <ellipse cx="600" cy="155" rx="250" ry="105"
+             transform="rotate(18 600 155)">
+
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="360 600 155"
+        to="0 600 155"
+        dur="12s"
+        repeatCount="indefinite"/>
+
+    </ellipse>
+
+    <ellipse cx="600"
+             cy="155"
+             rx="250"
+             ry="105"
              stroke="#d39b32"
-             transform="rotate(-20 600 155)"/>
+             transform="rotate(-20 600 155)">
+
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 600 155"
+        to="360 600 155"
+        dur="25s"
+        repeatCount="indefinite"/>
+
+    </ellipse>
+
   </g>
 
-  <g font-family="Arial, sans-serif">
-    <text x="600" y="58"
-          text-anchor="middle"
-          fill="#ffffff"
-          font-size="25"
-          font-weight="700">
-      Mohammed
+  <!-- Main title -->
+  <text x="600"
+        y="58"
+        text-anchor="middle"
+        fill="url(#textGradient)"
+        font-family="Arial, sans-serif"
+        font-size="30"
+        font-weight="700">
+    Mohammed
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600"
+        y="82"
+        text-anchor="middle"
+        fill="#9aa7bb"
+        font-family="Arial, sans-serif"
+        font-size="13">
+    Full Stack Developer • Open Source Creator
+  </text>
+
+  <!-- Center glowing core -->
+  <circle cx="600"
+          cy="155"
+          r="25"
+          fill="#0d1728"
+          stroke="#23c9df"
+          stroke-width="2"
+          filter="url(#glow)">
+
+    <animate attributeName="r"
+             values="23;28;23"
+             dur="2s"
+             repeatCount="indefinite"/>
+
+    <animate attributeName="stroke"
+             values="#23c9df;#9c82ef;#ff4ecd;#23c9df"
+             dur="6s"
+             repeatCount="indefinite"/>
+
+  </circle>
+
+  <!-- Center M -->
+  <text x="600"
+        y="163"
+        text-anchor="middle"
+        fill="url(#textGradient)"
+        font-family="Arial, sans-serif"
+        font-size="17"
+        font-weight="700">
+    M
+  </text>
+
+  <!-- Technologies -->
+  <g font-family="Arial, sans-serif"
+     font-size="12">
+
+    <text x="285" y="126" fill="#55b7df">Python</text>
+
+    <text x="360" y="105" fill="#9c82ef">HTML5</text>
+
+    <text x="785" y="110" fill="#39c8c5">C</text>
+
+    <text x="850" y="150" fill="#d5a23d">Docker</text>
+
+    <text x="780" y="215" fill="#6fa7e8">
+      GitHub Actions
     </text>
 
-    <text x="600" y="82"
-          text-anchor="middle"
-          fill="#9aa7bb"
-          font-size="13">
-      Full Stack Developer • Open Source Creator
+    <text x="370" y="215" fill="#66b3e8">Git</text>
+
+    <text x="250" y="178" fill="#b7a9e8">CSS</text>
+
+    <text x="920" y="190" fill="#3fb2cc">
+      MongoDB
     </text>
 
-    <circle cx="600" cy="155" r="25"
-            fill="#0d1728"
-            stroke="#23c9df"
-            stroke-width="2"
-            filter="url(#glow)"/>
-
-    <text x="600" y="163"
-          text-anchor="middle"
-          fill="#23c9df"
-          font-size="17"
-          font-weight="700">
-      M
-    </text>
-
-    <g font-size="12">
-      <text x="285" y="126" fill="#55b7df">Python</text>
-      <text x="360" y="105" fill="#9c82ef">HTML5</text>
-      <text x="785" y="110" fill="#39c8c5">C</text>
-      <text x="850" y="150" fill="#d5a23d">Docker</text>
-      <text x="780" y="215" fill="#6fa7e8">GitHub Actions</text>
-      <text x="370" y="215" fill="#66b3e8">Git</text>
-      <text x="250" y="178" fill="#b7a9e8">CSS</text>
-      <text x="920" y="190" fill="#3fb2cc">MongoDB</text>
-    </g>
-
-    <text x="600" y="270"
-          text-anchor="middle"
-          fill="#768398"
-          font-size="12"
-          font-style="italic">
-      "The best code is the code that empowers others."
-    </text>
   </g>
+
+  <!-- Quote -->
+  <text x="600"
+        y="270"
+        text-anchor="middle"
+        fill="#768398"
+        font-family="Arial, sans-serif"
+        font-size="12"
+        font-style="italic">
+    "The best code is the code that empowers others."
+  </text>
+
 </svg>
