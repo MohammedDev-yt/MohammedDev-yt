@@ -149,3 +149,6 @@
 
 [![Pofile views](https://u8views.com/api/v1/github/profiles/157171073/views/day-week-month-total-count.svg)](https://u8views.com/github/MohammedDev-yt)
 
+<a href="https://github.com/MohammedDev-yt">
+  <img width="100%" alt="Thanks For Watching" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,2,5,20,30&height=150&section=footer&text=Thanks%20For%20Watching&fontSize=40&fontAlignY=68&fontColor=ffffff&animation=fadeIn"/>
+</a>
