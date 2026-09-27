@@ -142,7 +142,7 @@
     <img src="https://img.shields.io/badge/My_Repos-00F7FF?style=for-the-badge&logo=git&logoColor=white"/>
   </a>
 <a href="https://telegram.me/Mr_Mohammed_29"><img alt="replit" src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white"/></a>
-<br>
+<br><br>
 
 <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/72903324-cf57-4e90-80a6-ed3c9734e0ed" width="900">
 
