@@ -53,7 +53,6 @@
     width="850"
     alt="Mohammed Galaxy Header"
   />
-
   <br>
 
   <!-- Mission Telemetry -->
@@ -62,7 +61,6 @@
     width="850"
     alt="Mission Telemetry"
   />
-
   <br>
 
   <!-- Language Telemetry -->
@@ -71,7 +69,6 @@
     width="850"
     alt="Language and Focus Telemetry"
   />
-
   <br>
 
   <!-- Featured Systems -->
@@ -80,7 +77,6 @@
     width="850"
     alt="Featured Systems"
   />
-
 </div>
 
 ## 📝 Languages & Skills
