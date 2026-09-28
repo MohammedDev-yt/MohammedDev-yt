@@ -1,0 +1,20 @@
+<!-- Code Block -->
+<div style="background-color: #161b22; border-radius: 8px; padding: 16px; font-family: monospace; font-size: 14px; margin-bottom: 20px; line-height: 1.6;">
+  <div><span style="color: #ff7b72;">const</span> <span style="color: #ffa657;">developer</span> = {</div>
+  <div style="padding-left: 20px;"><span style="color: #e6edf3;">name:</span> <span style="color: #7ee787;">'Mohammed'</span>,</div>
+  <div style="padding-left: 20px;"><span style="color: #e6edf3;">college:</span> <span style="color: #7ee787;">'IIET, Siddipet'</span>,</div>
+  <div style="padding-left: 20px;"><span style="color: #e6edf3;">specialization:</span> <span style="color: #7ee787;">'AI & Web Development'</span></div>
+  <div>};</div>
+</div>
+
+<!-- Stats Section -->
+<div style="display: flex; gap: 16px;">
+  <div style="flex: 1; background-color: #161b22; border-radius: 8px; padding: 16px; text-align: center;">
+    <div style="font-size: 22px; font-weight: bold; color: #ffffff;">6+ Months</div>
+    <div style="font-size: 12px; color: #8b949e; margin-top: 4px;">Web Application Experience</div>
+  </div>
+  <div style="flex: 1; background-color: #161b22; border-radius: 8px; padding: 16px; text-align: center;">
+    <div style="font-size: 22px; font-weight: bold; color: #ffffff;">3rd Year</div>
+    <div style="font-size: 12px; color: #8b949e; margin-top: 4px;">B.Tech</div>
+  </div>
+</div>
