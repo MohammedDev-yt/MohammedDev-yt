@@ -42,6 +42,52 @@
   </a>
 </p>
 
+<div align="center">
+  <div style="
+    background-color: #0d1117; 
+    border: 1px solid #ff4444; 
+    box-shadow: 0 0 25px rgba(255, 68, 68, 0.3); 
+    border-radius: 16px; 
+    padding: 24px; 
+    max-width: 600px; 
+    color: #e6edf3; 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    text-align: left;
+  ">
+    <!-- Top Bar -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+      <div style="display: flex; gap: 8px;">
+        <span style="width: 12px; height: 12px; background-color: #ff5f56; border-radius: 50%; display: inline-block;"></span>
+        <span style="width: 12px; height: 12px; background-color: #ffbd2e; border-radius: 50%; display: inline-block;"></span>
+        <span style="width: 12px; height: 12px; background-color: #27c93f; border-radius: 50%; display: inline-block;"></span>
+      </div>
+      <span style="color: #8b949e; font-family: monospace; font-size: 14px;">dev-workspace.config</span>
+      <span style="background-color: rgba(39, 201, 63, 0.15); color: #27c93f; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: bold;">● Online</span>
+    </div>
+
+    <!-- Code Block -->
+    <div style="background-color: #161b22; border-radius: 8px; padding: 16px; font-family: monospace; font-size: 14px; margin-bottom: 20px; line-height: 1.6;">
+      <div><span style="color: #ff7b72;">const</span> <span style="color: #ffa657;">developer</span> = {</div>
+      <div style="padding-left: 20px;"><span style="color: #e6edf3;">name:</span> <span style="color: #7ee787;">'Mohammed'</span>,</div>
+      <div style="padding-left: 20px;"><span style="color: #e6edf3;">college:</span> <span style="color: #7ee787;">'IIET, Siddipet'</span>,</div>
+      <div style="padding-left: 20px;"><span style="color: #e6edf3;">specialization:</span> <span style="color: #7ee787;">'AI & Web Development'</span></div>
+      <div>};</div>
+    </div>
+
+    <!-- Stats Section -->
+    <div style="display: flex; gap: 16px;">
+      <div style="flex: 1; background-color: #161b22; border-radius: 8px; padding: 16px; text-align: center;">
+        <div style="font-size: 22px; font-weight: bold; color: #ffffff;">6+ Months</div>
+        <div style="font-size: 12px; color: #8b949e; margin-top: 4px;">Web Application Experience</div>
+      </div>
+      <div style="flex: 1; background-color: #161b22; border-radius: 8px; padding: 16px; text-align: center;">
+        <div style="font-size: 22px; font-weight: bold; color: #ffffff;">3rd Year</div>
+        <div style="font-size: 12px; color: #8b949e; margin-top: 4px;">B.Tech</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div align="center">
 
