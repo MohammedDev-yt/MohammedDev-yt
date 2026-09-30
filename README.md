@@ -42,10 +42,6 @@
   </a>
 </p>
 
-<p align="center">
-  <img src="card.png" width="600">
-</p>
-
 <div align="center">
 
   <!-- Galaxy Header -->
