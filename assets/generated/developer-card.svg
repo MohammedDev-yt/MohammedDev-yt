@@ -37,8 +37,7 @@
 
     <!-- Code panel gradient -->
     <linearGradient id="codeBg"
-                    x1="0" y1="0"
-                    x2="1" y2="1">
+                    x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#161b22"/>
       <stop offset="100%" stop-color="#11161d"/>
     </linearGradient>
@@ -232,7 +231,7 @@
 
     <tspan fill="#79c0ff">specialization</tspan>
     <tspan fill="#e6edf3">: </tspan>
-    <tspan fill="#7ee787">'Web Development & Automation Bots'</tspan>
+    <tspan fill="#7ee787">'Web Development &amp; Automation Bots'</tspan>
 
   </text>
 
