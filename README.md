@@ -43,6 +43,12 @@
 </p>
 
 <div align="center">
+  <img src="./assets/generated/developer-card.svg"
+       width="600"
+       alt="Mohammed Developer Card"/>
+</div>
+
+<div align="center">
 
   <!-- Galaxy Header -->
   <img src="./assets/generated/galaxy-header.svg"
