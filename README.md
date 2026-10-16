@@ -42,6 +42,9 @@
   </a>
 </p>
 
+![Describe your workflow, customize it, export the SVG, and embed it in a README.](./assets/demo.svg)
+<br>
+
 <div align="center">
   <img src="./assets/generated/developer-card.svg"
        width="600"
