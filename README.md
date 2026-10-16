@@ -193,10 +193,7 @@
   <a href="https://telegram.me/Mr_Mohammed_29">
     <img src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white"/>
   </a>
-</p>
-
-<div align="center">
-
+  
 <a href="mailto:mohammed300405@gmail.com" target="_blank">
   <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" width="40" height="40" alt="Gmail" style="margin: 5px;" />
 </a>
@@ -204,16 +201,12 @@
 <a href="https://github.com/MohammedDev-yt" target="_blank">
   <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" width="40" height="40" alt="GitHub" style="margin: 5px;" />
 </a>
+</p>
 
-<a href="https://www.linkedin.com/in/Mohammed." target="_blank">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" width="40" height="40" alt="LinkedIn" style="margin: 5px;" />
-</a>
-
-</div>
-
-<br/>
+<br>
 
 <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/72903324-cf57-4e90-80a6-ed3c9734e0ed" width="900">
+<br>
 
 [![Profile last updated](https://img.shields.io/github/last-commit/MohammedDev-yt/MohammedDev-yt/main?label=Last%20Updated&style=flat&logo=github&logoColor=white&color=7C3AED)](https://github.com/MohammedDev-yt/MohammedDev-yt/commits) 
 
