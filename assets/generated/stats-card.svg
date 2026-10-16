@@ -164,7 +164,7 @@
           font-family="Arial, sans-serif"
           opacity=".45"
           filter="url(#numGlow)">
-      551
+      727
     </text>
 
     <!-- number -->
@@ -175,7 +175,7 @@
           font-size="28"
           font-weight="700"
           font-family="Arial, sans-serif">
-      551
+      727
     </text>
 
     <text x="0"
@@ -434,7 +434,7 @@
           font-family="Arial, sans-serif"
           opacity=".45"
           filter="url(#numGlow)">
-      9
+      11
     </text>
 
     <text x="0"
@@ -444,7 +444,7 @@
           font-size="28"
           font-weight="700"
           font-family="Arial, sans-serif">
-      9
+      11
     </text>
 
     <text x="0"
