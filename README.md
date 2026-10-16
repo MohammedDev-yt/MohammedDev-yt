@@ -57,9 +57,7 @@
   [<img src="./assets/profile.jpg" width="115"><br><sub>@Mr_Mohammed_29</sub>](https://github.com/MohammedDev-yt) 
 
   [![](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/MohammedDev-yt)
-
 </div>
-<br>
 
 <div align="center">
   <img src="./assets/generated/developer-card.svg"
@@ -194,10 +192,9 @@
     <img src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white"/>
   </a>
 </p>
-<br>
 
 <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/72903324-cf57-4e90-80a6-ed3c9734e0ed" width="900">
-<br><br>
+<br>
 
 [![Profile last updated](https://img.shields.io/github/last-commit/MohammedDev-yt/MohammedDev-yt/main?label=Last%20Updated&style=flat&logo=github&logoColor=white&color=7C3AED)](https://github.com/MohammedDev-yt/MohammedDev-yt/commits) 
 
