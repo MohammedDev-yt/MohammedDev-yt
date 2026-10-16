@@ -45,7 +45,15 @@
 ![Describe your workflow, customize it, export the SVG, and embed it in a README.](./assets/demo.svg)
 <br>
 
-[<img src="./assets/profile.jpg" width="115"><br><sub>Mohammed</sub>](https://github.com/MohammedDev-yt) <br><br> [![](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/MohammedDev-yt)
+<div align="center">
+
+  [<img src="./assets/profile.jpg" width="115"><br><sub>@Mr_Mohammed_29</sub>](https://github.com/MohammedDev-yt) 
+
+  <br><br>
+
+  [![](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/MohammedDev-yt)
+
+</div>
 <br>
 
 <div align="center">
