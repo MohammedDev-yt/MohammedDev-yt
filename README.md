@@ -103,7 +103,8 @@
 #### ⚙️ Version Control & Documentation Tools
 
 - [![](https://ziadoua.github.io/m3-Markdown-Badges/badges/Github/github1.svg)](https://github.com/MohammedDev-yt)
-[![](https://ziadoua.github.io/m3-Markdown-Badges/badges/Git/git1.svg)](https://git-scm.com/)
+[![](https://ziadoua.github.io/m3-Markdown-Badges/badges/Git/git1.svg)](https://git-scm.com/) [![](https://ziadoua.github.io/m3-Markdown-Badges/badges/GithubActions/githubactions1.svg)](https://github.com/features/actions)
+
 
 ## 📈 Contribution Stack
 
