@@ -91,12 +91,14 @@
        alt="Mohammed Featured Systems"/>
 </div>
 
-| Build Status | |
+### Build Status
+
+| Build Status | Status Badge |
 | :--- | :--- |
-| **main branch CI builds** | [![CI Build](https://img.shields.io/badge/CI%20Build-no%20status-inactive)](https://github.com/MohammedDev-yt/MohammedDev-yt/actions)[cite: 1] |
-| **v1.4 branch CI builds** | [![CI Build](https://img.shields.io/badge/CI%20Build-no%20status-inactive)](https://github.com/MohammedDev-yt/MohammedDev-yt/actions)[cite: 1] |
-| **v1.3 branch CI builds** | [![CI Build](https://img.shields.io/badge/CI%20Build-no%20status-inactive)](https://github.com/MohammedDev-yt/MohammedDev-yt/actions)[cite: 1] |
-| **Nightly builds** | [![Nightly Build](https://img.shields.io/badge/Nightly%20Build-passing-brightgreen)](https://github.com/MohammedDev-yt/MohammedDev-yt/actions) [![coverity](https://img.shields.io/badge/coverity-passed-brightgreen)](https://scan.coverity.com/)[cite: 1] |
+| **main branch CI builds** | [![CI Build](https://img.shields.io/badge/CI%20Build-no%20status-inactive)](https://github.com/MohammedDev-yt/MohammedDev-yt/actions) |
+| **v1.4 branch CI builds** | [![CI Build](https://img.shields.io/badge/CI%20Build-no%20status-inactive)](https://github.com/MohammedDev-yt/MohammedDev-yt/actions) |
+| **v1.3 branch CI builds** | [![CI Build](https://img.shields.io/badge/CI%20Build-no%20status-inactive)](https://github.com/MohammedDev-yt/MohammedDev-yt/actions) |
+| **Nightly builds** | [![Nightly Build](https://img.shields.io/badge/Nightly%20Build-passing-brightgreen)](https://github.com/MohammedDev-yt/MohammedDev-yt/actions) [![coverity](https://img.shields.io/badge/coverity-passed-brightgreen)](https://scan.coverity.com/) |
 
 ## 📝 Languages & Skills
 
