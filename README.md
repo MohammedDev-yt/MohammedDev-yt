@@ -49,8 +49,7 @@
   </a>
 </p>
 
-<img src="https://m3-markdown-badges.vercel.app/stars/1/3/MohammedDev-yt/MohammedDev-yt" alt="Demo2">
-</p>
+[![](https://m3-markdown-badges.vercel.app/stars/1/3/MohammedDev-yt/MohammedDev-yt)](https://github.com/MohammedDev-yt)
 
 ![Describe your workflow, customize it, export the SVG, and embed it in a README.](./assets/demo.svg)
 <br>
