@@ -49,7 +49,9 @@
   </a>
 </p>
 
-[![](https://m3-markdown-badges.vercel.app/stars/1/3/MohammedDev-yt/MohammedDev-yt)](https://github.com/MohammedDev-yt)
+<p align="center">
+  <img src="https://count.getloli.com/get/@MohammedDev-yt" alt="Moe Counter">
+</p>
 
 ![Describe your workflow, customize it, export the SVG, and embed it in a README.](./assets/demo.svg)
 <br>
@@ -118,7 +120,7 @@
 
 ### ⚙️ Version Control & Documentation Tools
 
-- [![](https://ziadoua.github.io/m3-Markdown-Badges/badges/Github/github1.svg)](https://github.com/MohammedDev-yt) [![](https://ziadoua.github.io/m3-Markdown-Badges/badges/Git/git1.svg)](https://git-scm.com/) [![](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/features/actions)
+- [![](https://ziadoua.github.io/m3-Markdown-Badges/badges/Github/github1.svg)](https://github.com/MohammedDev-yt) [![](https://ziadoua.github.io/m3-Markdown-Badges/badges/Git/git1.svg)](https://git-scm.com/) [![](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/features/actions) [![](https://m3-markdown-badges.vercel.app/stars/1/3/MohammedDev-yt/MohammedDev-yt)](https://github.com/MohammedDev-yt)
 
 ## 📈 Contribution Stack
 
