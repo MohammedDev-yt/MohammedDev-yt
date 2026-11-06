@@ -53,6 +53,10 @@
   <img src="https://count.getloli.com/get/@MohammedDev-yt" alt="Moe Counter">
 </p>
 
+<p align="center">
+  <img src="./assets/Mohammed.gif" alt="Mohammed Terminal GIF" width="800">
+</p>
+
 ![Describe your workflow, customize it, export the SVG, and embed it in a README.](./assets/demo.svg)
 <br>
 
