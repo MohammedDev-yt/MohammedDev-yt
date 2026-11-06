@@ -200,6 +200,15 @@
 [![Star History Chart](https://api.star-history.com/chart?repos=MohammedDev-yt/MohammedDev-yt&type=timeline&logscale&legend=bottom-right)](https://www.star-history.com/?repos=MohammedDev-yt%2FMohammedDev-yt&type=timeline&logscale=&legend=bottom-right)
 
 
+## GitHub Stars Chart 
+
+![](https://hyperweave.app/v1/chart/stars/MohammedDev-yt/MohammedDev-yt/automata.static?variant=bone&v=2)
+
+## GitHub Repository Statistics Marquee
+
+![](https://hyperweave.app/v1/marquee/readme-ai/primer.static?data=gh:MohammedDev-yt/MohammedDev-yt.stars,gh:MohammedDev-yt/MohammedDev-yt.forks,gh:MohammedDev-yt/MohammedDev-yt.contributors,gh:MohammedDev-yt/MohammedDev-yt.last_push,gh:MohammedDev-yt/MohammedDev-yt.language&variant=porcelain)
+
+
 <!-- ====================  CONNECT  ==================== -->
 
 <h2 align="center">🤝 Cᴏɴɴᴇᴄᴛ Wɪᴛʜ Mᴇ 🤝</h2>
