@@ -57,6 +57,12 @@
   <img src="./assets/Mohammed.gif" alt="Mohammed Terminal GIF" width="800">
 </p>
 
+<p align="center">
+  <img width="720" src="https://stats.dooboo.io/api/github-stats-advanced?login=MohammedDev-yt" alt="Mohammed GitHub Stats">
+  <br>
+  <img width="720" src="https://stats.dooboo.io/api/github-trophies?login=MohammedDev-yt" alt="Mohammed GitHub Trophies">
+</p>
+
 ![Describe your workflow, customize it, export the SVG, and embed it in a README.](./assets/demo.svg)
 <br>
 
