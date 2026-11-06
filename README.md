@@ -203,9 +203,6 @@
 ## GitHub Stars Chart 
 
 ![](https://hyperweave.app/v1/chart/stars/MohammedDev-yt/MohammedDev-yt/automata.static?variant=bone&v=2)
-
-## GitHub Repository Statistics Marquee
-
 ![](https://hyperweave.app/v1/marquee/readme-ai/primer.static?data=gh:MohammedDev-yt/MohammedDev-yt.stars,gh:MohammedDev-yt/MohammedDev-yt.forks,gh:MohammedDev-yt/MohammedDev-yt.contributors,gh:MohammedDev-yt/MohammedDev-yt.last_push,gh:MohammedDev-yt/MohammedDev-yt.language&variant=porcelain)
 
 
